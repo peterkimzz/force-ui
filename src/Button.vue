@@ -1,15 +1,14 @@
 <template>
   <button
-    class="btn"
-    :class="['ashButton', 'ashButton--' + type, 'ashButton--' + size]"
+    :class="['forceButton', 'forceButton--' + type, 'forceButton--' + size]"
   >
-    asfoiqmwofimqwoifmqoiw
+    <slot />
   </button>
 </template>
 
 <script>
 export default {
-  name: "MonoButton",
+  name: "ForceButton",
   props: {
     type: {
       type: String,
@@ -26,10 +25,7 @@ export default {
 </script>
 
 <style>
-.btn {
-  font-size: 2rem;
-}
-.ashButton {
+.forceButton {
   display: inline-block;
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -39,33 +35,33 @@ export default {
   cursor: pointer;
 }
 
-.ashButton--default {
+.forceButton--default {
   background-color: #0194ef;
 }
 
-.ashButton--success {
+.forceButton--success {
   background-color: #1bb934;
 }
 
-.ashButton--error {
+.forceButton--error {
   background-color: #e1112c;
 }
 
-.ashButton--small {
+.forceButton--small {
   padding: 8px 10px;
   border-radius: 4px;
   font-size: 12px;
   line-height: 12px;
 }
 
-.ashButton--default {
+.forceButton--default {
   padding: 12px 14px;
   border-radius: 6px;
   font-size: 14px;
   line-height: 16px;
 }
 
-.ashButton--large {
+.forceButton--large {
   padding: 16px 18px;
   border-radius: 8px;
   font-size: 16px;

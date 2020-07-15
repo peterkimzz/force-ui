@@ -1,25 +1,28 @@
 {
-  "name": "mono-ui",
-  "version": "0.0.1",
+  "name": "force-ui",
+  "version": "0.0.2",
   "description": "Web UI Components for Vue.js",
   "main": "dist/index.common.js",
   "style": "dist/index.css",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name index src/index.js"
+    "build": "vue-cli-service build --target lib --name index src/index.js",
+    "publish": "npm publish"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "*.json"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/peterkimzz/mono-ui.git"
-  },
-  "homepage": "https://github.com/peterkimzz/mono-ui#readme",
-  "bugs": {
-    "url": "https://github.com/peterkimzz/mono-ui/issues"
-  },
   "author": "peterkimzz <peterkimzz69@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterkimzz/force-ui.git"
+  },
+  "homepage": "https://github.com/peterkimzz/force-ui.git",
+  "bugs": {
+    "url": "https://github.com/peterkimzz/force-ui/issues",
+    "email": "peterkimzz69@gmail.com"
+  },
   "dependencies": {
     "vue": "^2.6.11"
   },
