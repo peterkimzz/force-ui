@@ -15,7 +15,7 @@ import Vue from "vue";
 import App from "./App.vue";
 
 import ForceUI from "force-ui";
-import "force-ui/dist/index.css";
+import "force-ui/dist/force-ui.css";
 
 Vue.use(ForceUI);
 ```
