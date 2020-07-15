@@ -8,17 +8,23 @@
 
 <script>
 export default {
-  name: "ForceButton",
+  name: "FButton",
   props: {
     type: {
       type: String,
       required: false,
       default: "default",
+      validator(x) {
+        return ["default", "success", "error"].indexOf(x) !== -1;
+      },
     },
     size: {
       type: String,
       required: false,
       default: "default",
+      validator(x) {
+        return ["small", "default", "large"].indexOf(x) !== -1;
+      },
     },
   },
 };

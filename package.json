@@ -1,10 +1,10 @@
 {
   "name": "force-ui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Web UI Components for Vue.js",
   "main": "dist/index.common.js",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name index src/index.js",
+    "build": "vue-cli-service build --target lib --name force-ui src/index.js",
     "publish": "yarn build && npm publish"
   },
   "files": [
