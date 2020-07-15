@@ -4,7 +4,7 @@
     :href="href"
     :to="href"
     :target="target"
-    :class="['forceLink']"
+    :class="['force-link']"
   >
     <slot />
   </component>
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style>
-.forceLink {
+.force-link {
   display: inline-block;
   color: #333;
 }

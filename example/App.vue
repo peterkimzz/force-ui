@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="bg-indigo-100">
     <div>Hello, {{ bundler }}</div>
-    <f-button>aosdfmo</f-button>
-    <f-link href="/a">go to link</f-link>
+    <f-button type="primary">aosdfmo</f-button>
+    <f-button>qowimfoqiwmfoiqmwf</f-button>
   </div>
 </template>
 
@@ -17,9 +17,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style scoped>
-.container {
-  color: green;
-}
-</style>

@@ -4,7 +4,9 @@
   "description": "Web UI Components for Vue.js",
   "main": "dist/index.common.js",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name force-ui src/index.js",
+    "dev": "parcel -p 3000 watch -d app example/index.html",
+    "build": "parcel build -d dist src/index.js --out-file force-ui",
+    "build-vue-cli": "vue-cli-service build --dest dist2 --target lib --name force-ui src/index.js",
     "publish": "yarn build && npm publish"
   },
   "files": [
@@ -28,7 +30,9 @@
   "devDependencies": {
     "@vue/cli": "^4.4.6",
     "@vue/cli-service-global": "^4.4.6",
+    "parcel-bundler": "^1.12.4",
     "rollup-plugin-vue": "^5.1.9",
+    "tailwindcss": "^1.4.6",
     "vue-template-compiler": "^2.6.11"
   }
 }
