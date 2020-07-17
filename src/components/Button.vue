@@ -1,6 +1,14 @@
 <template>
   <button
-    :class="['force-button', 'force-button--' + type, 'force-button--' + size]"
+    :class="[
+      'f-button',
+      'f-button--' + type,
+      'f-button--' + size,
+      {
+        plain
+      }
+    ]"
+    @click="OnClick"
   >
     <slot />
   </button>
@@ -8,30 +16,64 @@
 
 <script>
 export default {
-  name: "FButton",
+  name: 'FButton',
   props: {
     type: {
       type: String,
       required: false,
-      default: "primary",
+      default: 'primary',
       validator(x) {
-        return ["primary", "success", "error"].indexOf(x) !== -1;
-      },
+        return (
+          [
+            'primary',
+            'info',
+            'success',
+            'warning',
+            'error',
+            'transparent'
+          ].indexOf(x) !== -1
+        )
+      }
     },
     size: {
       type: String,
       required: false,
-      default: "default",
+      default: 'default',
       validator(x) {
-        return ["small", "default", "large"].indexOf(x) !== -1;
-      },
+        return ['small', 'default', 'large'].indexOf(x) !== -1
+      }
     },
+    target: {
+      type: String,
+      default: '_self'
+    },
+    href: {
+      type: String,
+      default: null
+    },
+    plain: {
+      type: Boolean,
+      default: false
+    }
   },
-};
+  methods: {
+    OnClick() {
+      if (!this.href) {
+        return this.$emit('click')
+      }
+
+      if (this.target === '_blank') {
+        return window.open(this.href)
+      }
+
+      location.href = this.href
+    }
+  }
+}
 </script>
 
 <style lang="postcss" scoped>
-.force-button {
+.f-button {
   @apply outline-none;
 
   @apply bg-white;
@@ -41,10 +83,77 @@ export default {
 
   @apply px-4 py-2;
   @apply rounded;
+}
 
-  &--primary {
-    @apply bg-primary;
-    @apply text-white;
+/** Type */
+.f-button--primary {
+  @apply bg-primary;
+  @apply text-white;
+}
+.f-button--primary.plain {
+  @apply border-primary;
+  @apply bg-white;
+  @apply text-primary;
+}
+
+.f-button--info {
+  @apply bg-gray-400;
+  @apply text-gray-800;
+}
+.f-button--info.plain {
+  @apply bg-gray-100;
+  @apply border-gray-200;
+  @apply text-gray-900;
+}
+
+.f-button--success {
+  @apply bg-green-400;
+  @apply text-green-800;
+}
+.f-button--success.plain {
+  @apply bg-green-100;
+  @apply border-green-200;
+  @apply text-green-900;
+}
+
+.f-button--warning {
+  @apply bg-yellow-400;
+  @apply text-yellow-900;
+}
+.f-button--warning.plain {
+  @apply bg-yellow-100;
+  @apply border-yellow-200;
+  @apply text-yellow-700;
+}
+
+.f-button--error {
+  @apply bg-red-500;
+  @apply text-red-700;
+}
+.f-button--error.plain {
+  @apply bg-red-100;
+  @apply border-red-200;
+  @apply text-red-900;
+}
+
+.f-button--transparent {
+  @apply bg-transparent;
+  @apply text-gray-900;
+  @apply border-transparent;
+
+  &:hover {
+    @apply bg-gray-100;
   }
+}
+
+/** Size */
+.f-button--default {
+  @apply text-sm;
+}
+.f-button--small {
+  @apply text-xs;
+}
+.f-button--large {
+  @apply text-lg;
 }
 </style>

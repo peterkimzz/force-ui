@@ -1,19 +1,22 @@
-import FButton from "./components/Button.vue";
-import FLink from "./components/Link.vue";
-import "./index.css";
+import FButton from './components/Button.vue'
+import FLink from './components/Link.vue'
+import FContainer from './components/Container.vue'
 
-const install = (Vue) => {
-  if (install.installed) return;
+import './index.css'
 
-  Vue.component(FButton.name, FButton);
-  Vue.component(FLink.name, FLink);
-};
+const install = (Vue, options) => {
+  if (install.installed) return
 
-// auto install if used in browser
-if (typeof window !== "undefined" && window.Vue) {
-  install(window.Vue);
+  Vue.component(FButton.name, FButton)
+  Vue.component(FLink.name, FLink)
+  Vue.component(FContainer.name, FContainer)
 }
 
-export { FButton, FLink };
+// auto install if used in browser
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
+}
 
-export default install;
+export { FButton, FLink, FContainer }
+
+export default install

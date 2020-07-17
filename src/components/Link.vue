@@ -12,36 +12,43 @@
 
 <script>
 export default {
-  name: "FLink",
+  name: 'FLink',
   props: {
     href: {
       type: String,
-      default: "",
+      default: null
     },
     target: {
       type: String,
-      default: "_self",
-    },
+      default: '_self',
+      validator(x) {
+        return ['_self', '_blank'].indexOf(x) !== -1
+      }
+    }
   },
   computed: {
     is() {
       if (!this.href) {
-        return "span";
+        return 'span'
       }
 
-      if (this.target === "_blank") {
-        return "a";
+      if (this.target === '_blank') {
+        return 'a'
       }
 
-      return "router-link";
-    },
-  },
-};
+      return 'router-link'
+    }
+  }
+}
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .force-link {
-  display: inline-block;
-  color: #333;
+  @apply inline-block;
+  @apply text-gray-800;
+
+  &:hover {
+    @apply underline;
+  }
 }
 </style>

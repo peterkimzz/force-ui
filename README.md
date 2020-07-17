@@ -8,16 +8,36 @@ Web UI framework with `tailwindcss`
 $ yarn add force-ui # or npm add force-ui
 ```
 
+## Prequisites
+
+Below tailwind configuration is **required**!
+
+```js
+// tailwind.config.js
+
+module.exports = {
+  // ...
+  theme: {
+    extend: {
+      colors: {
+        primary: '#CC4D29'
+      }
+    }
+  }
+  // ...
+}
+```
+
 ## Usage
 
 ```js
-import Vue from "vue";
-import App from "./App.vue";
+import Vue from 'vue'
+import App from './App.vue'
 
-import ForceUI from "force-ui";
-import "force-ui/dist/force-ui.css";
+import ForceUI from 'force-ui'
+import 'force-ui/dist/force-ui.css'
 
-Vue.use(ForceUI);
+Vue.use(ForceUI)
 ```
 
 for `Nuxt.js`
@@ -46,15 +66,15 @@ in `.vue` file
 </template>
 
 <script>
-import Vue from "vue";
+import Vue from 'vue'
 
 export default {
   data() {
     return {
-      ui: "Force UI",
-    };
-  },
-};
+      ui: 'Force UI'
+    }
+  }
+}
 </script>
 
 <style scoped>
