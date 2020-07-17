@@ -8,7 +8,7 @@ Web UI framework with `tailwindcss`
 $ yarn add force-ui # or npm add force-ui
 ```
 
-## Prequisites
+## Prerequisite
 
 Below tailwind configuration is **required**!
 
@@ -28,8 +28,6 @@ module.exports = {
 }
 ```
 
-## Usage
-
 ```js
 import Vue from 'vue'
 import App from './App.vue'
@@ -42,18 +40,23 @@ Vue.use(ForceUI)
 
 for `Nuxt.js`
 
+```zsh
+$ yarn add -D @nuxtjs/tailwindcss
+```
+
 ```js
 // nuxt.config.js
 
 module.exports {
   // ...
+  buildModules: ['@nuxtjs/tailwindcss'],
   plugins: [
-    {
-      src: '~/plugins/force-ui'
-    }
+    { src: '~/plugins/force-ui' }
   ]
 }
 ```
+
+## Usage
 
 in `.vue` file
 
@@ -66,8 +69,6 @@ in `.vue` file
 </template>
 
 <script>
-import Vue from 'vue'
-
 export default {
   data() {
     return {
@@ -77,7 +78,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .container {
   color: green;
 }
