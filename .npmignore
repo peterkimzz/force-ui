@@ -8,3 +8,6 @@ src
 node_modules
 
 example
+yarn.lock
+
+tailwind.config

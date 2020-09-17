@@ -10,8 +10,6 @@ $ yarn add force-ui # or npm add force-ui
 
 ## Prerequisite
 
-Below tailwind configuration is **required**!
-
 ```js
 // tailwind.config.js
 

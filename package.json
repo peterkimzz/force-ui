@@ -1,6 +1,6 @@
 {
   "name": "force-ui",
-  "version": "0.3.0",
+  "version": "0.3.4",
   "description": "Web UI Components for Vue.js",
   "main": "dist/force-ui.common.js",
   "style": "dist/force.ui.css",
@@ -11,7 +11,8 @@
   },
   "files": [
     "dist/*",
-    "*.json"
+    "*.json",
+    "*.js"
   ],
   "author": "peterkimzz <peterkimzz69@gmail.com>",
   "license": "MIT",
@@ -19,7 +20,7 @@
     "type": "git",
     "url": "https://github.com/peterkimzz/force-ui.git"
   },
-  "homepage": "https://github.com/peterkimzz/force-ui.git",
+  "homepage": "https://github.com/peterkimzz/force-ui",
   "bugs": {
     "url": "https://github.com/peterkimzz/force-ui/issues",
     "email": "peterkimzz69@gmail.com"
