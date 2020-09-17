@@ -41,7 +41,7 @@ Vue.use(ForceUI)
 for `Nuxt.js`
 
 ```zsh
-$ yarn add -D @nuxtjs/tailwindcss
+$ yarn add -D @nuxtjs/tailwindcss # or npm i -D @nuxtjs/tailwindcss
 ```
 
 ```js

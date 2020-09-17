@@ -1,6 +1,6 @@
 {
   "name": "force-ui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Web UI Components for Vue.js",
   "main": "dist/force-ui.common.js",
   "style": "dist/force.ui.css",
@@ -25,6 +25,7 @@
     "email": "peterkimzz69@gmail.com"
   },
   "dependencies": {
+    "@tailwindcss/ui": "^0.6.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {

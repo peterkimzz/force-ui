@@ -1,6 +1,6 @@
 <template>
   <div class="f-container">
-    <div class="f-inner-container">
+    <div class="f-inner-container bg-cool-gray-700">
       <slot />
     </div>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'FContainer'
+  name: 'FContainer',
 }
 </script>
 

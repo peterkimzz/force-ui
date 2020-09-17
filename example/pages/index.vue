@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="abc">qpwfmqpwofmpqowf</div>
+    <div class="bg-cool-gray-700">qpwfmqpwofmpqowf</div>
     <f-container>
       <div>
         <f-button target="_blank" href="https://google.com" type="primary"
@@ -28,9 +28,3 @@
     </f-container>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.abc {
-  /* @apply bg-primary; */
-}
-</style>

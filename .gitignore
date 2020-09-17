@@ -1,8 +1,8 @@
+.cache
+
 node_modules
 
 dist
-
-app
 
 .cache
 

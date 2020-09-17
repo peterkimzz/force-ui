@@ -5,8 +5,8 @@
       'f-button--' + type,
       'f-button--' + size,
       {
-        plain
-      }
+        plain,
+      },
     ]"
     @click="OnClick"
   >
@@ -30,10 +30,10 @@ export default {
             'success',
             'warning',
             'error',
-            'transparent'
+            'transparent',
           ].indexOf(x) !== -1
         )
-      }
+      },
     },
     size: {
       type: String,
@@ -41,20 +41,20 @@ export default {
       default: 'default',
       validator(x) {
         return ['small', 'default', 'large'].indexOf(x) !== -1
-      }
+      },
     },
     target: {
       type: String,
-      default: '_self'
+      default: '_self',
     },
     href: {
       type: String,
-      default: null
+      default: null,
     },
     plain: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   methods: {
     OnClick() {
@@ -67,8 +67,8 @@ export default {
       }
 
       location.href = this.href
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -87,13 +87,13 @@ export default {
 
 /** Type */
 .f-button--primary {
-  @apply bg-primary;
+  @apply bg-primary-500;
   @apply text-white;
 }
 .f-button--primary.plain {
-  @apply border-primary;
+  @apply border-primary-500;
   @apply bg-white;
-  @apply text-primary;
+  @apply text-primary-500;
 }
 
 .f-button--info {
