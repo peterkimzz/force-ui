@@ -8,6 +8,7 @@
         plain,
       },
     ]"
+    class="btn-default"
     @click="OnClick"
   >
     <slot />
@@ -21,17 +22,18 @@ export default {
     type: {
       type: String,
       required: false,
-      default: 'primary',
-      validator(x) {
+      default: null,
+      validator(v) {
         return (
           [
             'primary',
+            'secondary',
             'info',
             'success',
             'warning',
             'error',
             'transparent',
-          ].indexOf(x) !== -1
+          ].indexOf(v) !== -1
         )
       },
     },
@@ -39,8 +41,8 @@ export default {
       type: String,
       required: false,
       default: 'default',
-      validator(x) {
-        return ['small', 'default', 'large'].indexOf(x) !== -1
+      validator(v) {
+        return ['mini', 'small', 'default', 'large'].indexOf(v) !== -1
       },
     },
     target: {
@@ -73,27 +75,44 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.f-button {
-  @apply outline-none;
-
-  @apply bg-white;
-  @apply text-black;
-  @apply border border-gray-200;
-  @apply font-semibold;
-
-  @apply px-4 py-2;
-  @apply rounded;
+/** Size */
+.f-button--small {
+  @apply btn-size-small;
+}
+.f-button--default {
+  @apply btn-size-default;
+}
+.f-button--large {
+  @apply btn-size-large;
 }
 
 /** Type */
 .f-button--primary {
   @apply bg-primary-500;
   @apply text-white;
+
+  &:hover {
+    @apply bg-primary-400;
+  }
 }
 .f-button--primary.plain {
   @apply border-primary-500;
   @apply bg-white;
   @apply text-primary-500;
+}
+
+.f-button--secondary {
+  @apply bg-secondary-500;
+  @apply text-white;
+
+  &:hover {
+    @apply bg-secondary-400;
+  }
+}
+.f-button--secondary.plain {
+  @apply border-secondary-500;
+  @apply bg-white;
+  @apply text-secondary-500;
 }
 
 .f-button--info {
@@ -144,16 +163,5 @@ export default {
   &:hover {
     @apply bg-gray-100;
   }
-}
-
-/** Size */
-.f-button--default {
-  @apply text-sm;
-}
-.f-button--small {
-  @apply text-xs;
-}
-.f-button--large {
-  @apply text-lg;
 }
 </style>
