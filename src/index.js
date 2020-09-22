@@ -1,6 +1,7 @@
+import FContainer from './components/Container.vue'
 import FButton from './components/Button.vue'
 import FLink from './components/Link.vue'
-import FContainer from './components/Container.vue'
+import FInput from './components/Input.vue'
 
 import './index.css'
 
@@ -10,6 +11,7 @@ const install = (Vue, options) => {
   Vue.component(FButton.name, FButton)
   Vue.component(FLink.name, FLink)
   Vue.component(FContainer.name, FContainer)
+  Vue.component(FInput.name, FInput)
 }
 
 // auto install if used in browser

@@ -42,7 +42,7 @@ export default {
       required: false,
       default: 'default',
       validator(v) {
-        return ['mini', 'small', 'default', 'large'].indexOf(v) !== -1
+        return ['small', 'default', 'large'].indexOf(v) !== -1
       },
     },
     target: {

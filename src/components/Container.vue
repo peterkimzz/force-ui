@@ -1,6 +1,6 @@
 <template>
-  <div class="f-container">
-    <div class="f-inner-container bg-cool-gray-700">
+  <div class="container">
+    <div class="mx-auto px-3">
       <slot />
     </div>
   </div>
@@ -11,12 +11,3 @@ export default {
   name: 'FContainer',
 }
 </script>
-
-<style lang="postcss" scoped>
-.f-container {
-  @apply mx-auto;
-}
-.f-inner-container {
-  @apply px-4;
-}
-</style>

@@ -10,6 +10,26 @@ module.exports = plugin.withOptions(
         }
       })
 
+      const BaseUtility = {
+        '.input--base': {
+        },
+        '.input--size-small': {
+
+        },
+        '.input--size-default': {
+
+        },
+        '.input--size-large': {
+
+        },
+        '.input--border': {
+          borderWidth: config('theme.borderWidth.default'),
+          borderColor: config('theme.colors.gray.400'),
+          borderStyle: 'solid',
+          borderRadius: config('theme.borderRadius.lg'),
+        }
+      }
+
       addUtilities({
         '.btn-default': {
           color: config('theme.colors.gray.900'),
@@ -49,32 +69,6 @@ module.exports = plugin.withOptions(
   function () {
     return {
       theme: {
-        extend: {
-          colors: {
-            primary: {
-              100: "#dee5fe",
-              200: "#becbfd",
-              300: "#9db0fc",
-              400: "#7d96fb",
-              500: "#5c7cfa",
-              600: "#4a63c8",
-              700: "#374a96",
-              800: "#253264",
-              900: "#121932"
-            },
-            secondary: {
-              100: '#ecf5fb',
-              200: '#d9ebf8',
-              300: '#c7e0f4',
-              400: '#b4d6f1',
-              500: '#a1cced',
-              600: '#81a3be',
-              700: '#617a8e',
-              800: '#40525f',
-              900: '#20292f'
-            }
-          }
-        },
         fontSize: {
           xs: '0.8rem',
           sm: '0.875rem',
@@ -107,6 +101,32 @@ module.exports = plugin.withOptions(
           '48': '12rem',
           '56': '14rem',
           '64': '16rem',
+        },
+        extend: {
+          colors: {
+            primary: {
+              100: "#dee5fe",
+              200: "#becbfd",
+              300: "#9db0fc",
+              400: "#7d96fb",
+              500: "#5c7cfa",
+              600: "#4a63c8",
+              700: "#374a96",
+              800: "#253264",
+              900: "#121932"
+            },
+            secondary: {
+              100: '#ecf5fb',
+              200: '#d9ebf8',
+              300: '#c7e0f4',
+              400: '#b4d6f1',
+              500: '#a1cced',
+              600: '#81a3be',
+              700: '#617a8e',
+              800: '#40525f',
+              900: '#20292f'
+            }
+          }
         },
       }
     }
