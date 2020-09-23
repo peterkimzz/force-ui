@@ -1,0 +1,9 @@
+<template>
+  <div>
+    <f-container>
+      <div>
+        <f-checkbox>checkbox</f-checkbox>
+      </div>
+    </f-container>
+  </div>
+</template>

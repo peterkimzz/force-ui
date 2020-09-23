@@ -31,13 +31,12 @@
         </div>
 
         <div>
-          <f-button size="small">수정</f-button>
-          <f-button size="medium">발행하기</f-button>
-          <f-button size="large">시작하기</f-button>
+          <f-button type="ghost">Ghost button</f-button>
         </div>
       </f-form-container>
     </f-container>
 
+    <br />
     <f-container>
       <f-form-container>
         <f-heading tag="h2">Checkboxes</f-heading>
@@ -51,6 +50,7 @@
       </f-form-container>
     </f-container>
 
+    <br />
     <f-container>
       <f-form-container>
         <f-heading tag="h2">Radios</f-heading>
@@ -82,6 +82,38 @@
     <br />
     <f-container>
       <f-form-container>
+        <f-heading tag="h2">Dialog</f-heading>
+        <f-divider />
+
+        <f-slide v-model="slide"
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eos
+          sit dolor animi ullam vel molestiae enim! Quae, nihil? Dicta itaque
+          modi quis eum possimus ducimus laborum exercitationem, architecto
+          atque.</f-slide
+        >
+        <f-dialog v-model="dialog"
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit vel
+          esse commodi impedit quia accusamus vitae distinctio aspernatur
+          similique sunt perspiciatis corrupti, consectetur odio perferendis
+          nisi soluta, id eligendi doloremque.</f-dialog
+        >
+
+        <f-modal v-model="modal"
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nemo
+          veritatis, ipsa, autem architecto, porro natus excepturi reiciendis
+          quisquam obcaecati magnam minima! Sed non consequuntur, repellendus
+          velit veniam commodi odit?</f-modal
+        >
+
+        <f-button @click="slide = true">Slide open</f-button>
+        <f-button @click="dialog = true">Dialog open</f-button>
+        <f-button @click="modal = true">Modal open</f-button>
+      </f-form-container>
+    </f-container>
+
+    <br />
+    <f-container>
+      <f-form-container>
         <f-heading tag="h2">Links</f-heading>
         <f-divider />
 
@@ -95,34 +127,15 @@
 </template>
 
 <script>
-// import path from './test.json'
 export default {
   data() {
     return {
       input: '',
       checkbox: null,
-      radio: null
-    }
-  },
-  mounted() {
-    // const svgContainer = document.getElementById('svgContainer')
-    // const animItem = bodymovin.loadAnimation({
-    //   wrapper: svgContainer,
-    //   renderer: 'svg',
-    //   loop: true,
-    //   animationData: path
-    // })
-    // 'https://assets7.lottiefiles.com/private_files/lf30_ToTspb.json'
-    //   'https://labs.nearpod.com/bodymovin/demo/markus/isometric/markus2.json'
-  },
-  methods: {
-    async FetchImage() {
-      try {
-        const result = await this.$axios.get(
-          `https://unavatar.now.sh/github/peterkimzz`
-        )
-        this.src = data
-      } catch (err) {}
+      radio: null,
+      slide: false,
+      dialog: false,
+      modal: false
     }
   }
 }

@@ -45,6 +45,12 @@ module.exports = plugin.withOptions(
         '.input--bg-color-default-hover': {
           backgroundColor: config('theme.colors.gray.100'),
         },
+        '.input--outline': {
+          boxShadow: config('theme.boxShadow.outline-gray'),
+          transitionProperty: config('theme.transitionProperty.default'),
+          transitionDuration: config('theme.transitionDuration.150'),
+          transitionTimingFunction: config('theme.transitionTimingFunction.in-out'),
+        },
         '.input--size-small': {
           paddingTop: config('theme.spacing.1'),
           paddingBottom: config('theme.spacing.1'),
