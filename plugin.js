@@ -1,5 +1,18 @@
 const plugin = require('tailwindcss/plugin')
 
+const fontSize = {
+  xs: '0.8rem',
+  sm: '0.875rem',
+  base: '1rem',
+  lg: '1.125rem',
+  xl: '1.25rem',
+  '2xl': '1.5rem',
+  '3xl': '1.875rem',
+  '4xl': '2.25rem',
+  '5xl': '3rem',
+  '6xl': '4rem',
+}
+
 module.exports = plugin.withOptions(
   function () {
     return function ({ addBase, addUtilities, addComponents, config }) {
@@ -10,98 +23,85 @@ module.exports = plugin.withOptions(
         }
       })
 
-      const BaseUtility = {
-        '.input--base': {
+      /** Utilities */
+      const InputUtility = {
+        '.input--default': {
+          outline: 'none',
+          display: 'inline-block',
+          boxShadow: config('theme.boxShadow.sm')
+        },
+        '.input--border-default': {
+          borderStyle: 'solid',
+          borderWidth: config('theme.borderWidth.default'),
+          borderColor: config('theme.colors.gray.300'),
+          borderRadius: config('theme.borderRadius.lg'),
+        },
+        '.input--text-color-default': {
+          color: config('theme.colors.gray.800'),
+        },
+        '.input--bg-color-default': {
+          backgroundColor: config('theme.colors.white'),
+        },
+        '.input--bg-color-default-hover': {
+          backgroundColor: config('theme.colors.gray.100'),
         },
         '.input--size-small': {
-
+          paddingTop: config('theme.spacing.1'),
+          paddingBottom: config('theme.spacing.1'),
+          paddingLeft: config('theme.spacing.3'),
+          paddingRight: config('theme.spacing.3'),
+          fontSize: config('theme.fontSize.xs')
         },
-        '.input--size-default': {
-
+        '.input--size-medium': {
+          paddingTop: config('theme.spacing.2'),
+          paddingBottom: config('theme.spacing.2'),
+          paddingLeft: config('theme.spacing.4'),
+          paddingRight: config('theme.spacing.4'),
+          fontSize: config('theme.fontSize.sm')
         },
         '.input--size-large': {
-
-        },
-        '.input--border': {
-          borderWidth: config('theme.borderWidth.default'),
-          borderColor: config('theme.colors.gray.400'),
-          borderStyle: 'solid',
-          borderRadius: config('theme.borderRadius.lg'),
+          paddingTop: config('theme.spacing.3'),
+          paddingBottom: config('theme.spacing.3'),
+          paddingLeft: config('theme.spacing.5'),
+          paddingRight: config('theme.spacing.5'),
+          fontSize: config('theme.fontSize.base')
         }
       }
 
-      addUtilities({
-        '.btn-default': {
-          color: config('theme.colors.gray.900'),
-          backgroundColor: config('theme.colors.white'),
-          fontWeight: config('theme.fontWeight.bold'),
-          borderWidth: config('theme.borderWidth.default'),
-          borderColor: config('theme.colors.gray.400'),
-          borderStyle: 'solid',
-          borderRadius: config('theme.borderRadius.lg'),
-          outline: 'none',
-          display: 'inline-block',
-        },
-        '.btn-size-small': {
-          paddingTop: config('theme.spacing.1'),
-          paddingBottom: config('theme.spacing.1'),
+      const ButtonUtility = {
+        '.btn--size-small': {
+          paddingTop: config('theme.spacing[1.5]'),
+          paddingBottom: config('theme.spacing[1.5]'),
           paddingLeft: config('theme.spacing.4'),
           paddingRight: config('theme.spacing.4'),
           fontSize: config('theme.fontSize.xs')
         },
-        '.btn-size-default': {
+        '.btn--size-medium': {
           paddingTop: config('theme.spacing.2'),
           paddingBottom: config('theme.spacing.2'),
           paddingLeft: config('theme.spacing.5'),
           paddingRight: config('theme.spacing.5'),
           fontSize: config('theme.fontSize.sm')
         },
-        '.btn-size-large': {
+        '.btn--size-large': {
           paddingTop: config('theme.spacing.3'),
           paddingBottom: config('theme.spacing.3'),
           paddingLeft: config('theme.spacing.6'),
           paddingRight: config('theme.spacing.6'),
           fontSize: config('theme.fontSize.base')
-        },
+        }
+      }
+
+      addUtilities({
+        ...InputUtility,
+        ...ButtonUtility
       })
     }
   },
   function () {
     return {
       theme: {
-        fontSize: {
-          xs: '0.8rem',
-          sm: '0.875rem',
-          base: '1rem',
-          lg: '1.125rem',
-          xl: '1.25rem',
-          '2xl': '1.5rem',
-          '3xl': '1.875rem',
-          '4xl': '2.25rem',
-          '5xl': '3rem',
-          '6xl': '4rem',
-        },
-        spacing: {
-          px: '1px',
-          '0': '0',
-          '1': '0.35rem',
-          '2': '0.5rem',
-          '3': '0.75rem',
-          '4': '1rem',
-          '5': '1.25rem',
-          '6': '1.5rem',
-          '8': '2rem',
-          '10': '2.5rem',
-          '12': '3rem',
-          '16': '4rem',
-          '20': '5rem',
-          '24': '6rem',
-          '32': '8rem',
-          '40': '10rem',
-          '48': '12rem',
-          '56': '14rem',
-          '64': '16rem',
-        },
+        fontSize,
         extend: {
           colors: {
             primary: {
@@ -126,8 +126,8 @@ module.exports = plugin.withOptions(
               800: '#40525f',
               900: '#20292f'
             }
-          }
-        },
+          },
+        }
       }
     }
   }

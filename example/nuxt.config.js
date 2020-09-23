@@ -18,11 +18,11 @@ export default {
   },
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: [],
-  // plugins: [
-  //   {
-  //     src: '~/plugins/force-ui'
-  //   }
-  // ],
+  plugins: [
+    {
+      src: '~/plugins/force-ui'
+    }
+  ],
   components: true,
   build: {}
 }

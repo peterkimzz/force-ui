@@ -1,5 +1,4 @@
 module.exports = {
-  // important: true,
   purge: {
     enabled: true
   },
@@ -7,5 +6,8 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  plugins: [require('@tailwindcss/ui'), require('./plugin')]
+  plugins: [
+    require('@tailwindcss/ui'),
+    require('./plugin'),
+  ]
 }

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.6.2",
-    "nuxt": "^2.13.5"
+    "nuxt": "^2.14.6"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.0.2"
