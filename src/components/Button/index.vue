@@ -6,12 +6,17 @@
       'f-button--' + size,
       {
         plain,
-        round
+        round,
+        block
       }
     ]"
     @click="OnClick"
   >
-    <slot />
+    <span class="flex items-center">
+      <f-icon v-if="prefixIcon" :icon="prefixIcon" class="mr-2" />
+      <slot />
+      <f-icon v-if="suffixIcon" :icon="suffixIcon" class="ml-2" />
+    </span>
   </button>
 </template>
 
@@ -27,6 +32,7 @@ export default {
         return (
           [
             'default',
+            'black',
             'primary',
             'secondary',
             'info',
@@ -46,7 +52,11 @@ export default {
         return ['small', 'medium', 'large'].indexOf(v) !== -1
       }
     },
-    icon: {
+    prefixIcon: {
+      type: String,
+      default: null
+    },
+    suffixIcon: {
       type: String,
       default: null
     },
@@ -63,6 +73,10 @@ export default {
       default: false
     },
     round: {
+      type: Boolean,
+      default: false
+    },
+    block: {
       type: Boolean,
       default: false
     }
@@ -90,6 +104,7 @@ export default {
   @apply input--default;
   @apply input--border-default;
   @apply input--box-shadow;
+  @apply align-middle;
 
   &:focus {
     @apply input--outline;
@@ -97,6 +112,10 @@ export default {
 }
 .f-button.round {
   @apply rounded-full;
+}
+.f-button.block {
+  @apply w-full;
+  @apply block;
 }
 
 /** Size */
@@ -133,6 +152,20 @@ export default {
 .f-button--default.plain {
   @apply bg-gray-200;
   @apply text-gray-700;
+
+  &:hover {
+    @apply bg-gray-100;
+  }
+}
+
+.f-button--black {
+  @apply text-gray-100;
+  @apply bg-gray-900;
+  @apply border-gray-900;
+
+  &:hover {
+    @apply bg-gray-700;
+  }
 }
 
 .f-button--primary {

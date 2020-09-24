@@ -36,13 +36,14 @@ export default {
 
 <style lang="postcss" scoped>
 .form-container {
+  @apply bg-white;
   @apply rounded-md;
   @apply shadow-md;
 
   @apply p-4;
 
   @screen md {
-    @apply p-10;
+    @apply px-10 py-6;
   }
 }
 .form-container.noBorder {

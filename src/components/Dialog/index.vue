@@ -17,7 +17,7 @@
             <div class="flex items-center justify-between">
               <div class="font-semibold text-lg">{{ title }}</div>
               <f-button round @click="$emit('input', false)">
-                <f-close-icon />
+                <f-icon icon="Close" />
               </f-button>
             </div>
           </f-container>
@@ -44,12 +44,8 @@
 </template>
 
 <script>
-import FCloseIcon from '../Icon/Close'
 export default {
   name: 'FDialog',
-  components: {
-    FCloseIcon
-  },
   props: {
     value: {
       type: Boolean,

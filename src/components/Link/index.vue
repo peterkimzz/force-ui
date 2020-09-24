@@ -28,7 +28,7 @@ export default {
     type: {
       type: String,
       required: false,
-      default: null,
+      default: 'primary',
       validator(v) {
         return ['default', 'primary', 'button'].indexOf(v) !== -1
       }
@@ -75,5 +75,9 @@ export default {
     @apply no-underline;
     @apply input--bg-color-default-hover;
   }
+}
+
+.link--primary {
+  @apply text-primary-500;
 }
 </style>

@@ -1,5 +1,7 @@
 <template>
-  <span>© {{ GetYear }} {{ title }}. All right reserved.</span>
+  <span class="copyright"
+    >© {{ GetYear }} {{ title }}. All right reserved.</span
+  >
 </template>
 
 <script>
@@ -19,3 +21,9 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.copyright {
+  @apply text-sm;
+}
+</style>

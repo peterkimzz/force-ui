@@ -1,5 +1,6 @@
 module.exports = {
   variants: {},
+  important: true,
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true

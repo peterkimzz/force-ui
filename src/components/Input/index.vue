@@ -43,6 +43,10 @@ export default {
     @apply shadow-outline-gray;
   }
 }
+.f-input.block {
+  @apply block;
+  @apply w-full;
+}
 
 /** Size */
 .f-input--small {

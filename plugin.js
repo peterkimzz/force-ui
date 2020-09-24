@@ -19,7 +19,8 @@ module.exports = plugin.withOptions(
       addBase({
         html: {
           '-webkit-font-smoothing': 'antialiased',
-          '-moz-osx-font-smoothing': 'grayscale'
+          '-moz-osx-font-smoothing': 'grayscale',
+          // backgroundColor: config('theme.colors.gray.50')
         }
       })
 
@@ -28,6 +29,7 @@ module.exports = plugin.withOptions(
         '.input--default': {
           outline: 'none',
           display: 'inline-block',
+          maxWidth: '100%'
         },
         '.input--box-shadow': {
           boxShadow: config('theme.boxShadow.sm')

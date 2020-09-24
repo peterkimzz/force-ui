@@ -28,6 +28,10 @@ export default {
 
 <style lang="postcss" scoped>
 .input-container {
+  /* @apply flex-1; */
+  /* flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 0%; */
 }
 
 .input-container__label {
