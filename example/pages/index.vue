@@ -82,6 +82,23 @@
     <br />
     <f-container>
       <f-form-container>
+        <f-heading tag="h2">Input Containers</f-heading>
+        <f-divider />
+
+        <div class="flex space-x-2">
+          <f-input-container required label="First name">
+            <f-input />
+          </f-input-container>
+          <f-input-container label="Last name">
+            <f-input />
+          </f-input-container>
+        </div>
+      </f-form-container>
+    </f-container>
+
+    <br />
+    <f-container>
+      <f-form-container>
         <f-heading tag="h2">Dialog</f-heading>
         <f-divider />
 
@@ -114,12 +131,39 @@
     <br />
     <f-container>
       <f-form-container>
+        <f-heading tag="h2">Copyright</f-heading>
+        <f-divider />
+
+        <div>
+          <f-copyright title="Force UI" />
+        </div>
+      </f-form-container>
+    </f-container>
+
+    <br />
+    <f-container>
+      <f-form-container>
         <f-heading tag="h2">Links</f-heading>
         <f-divider />
 
         <div>
           <f-link href="/links">Default</f-link>
           <f-link href="/links" type="button">Button</f-link>
+          <f-button>Button</f-button>
+        </div>
+      </f-form-container>
+    </f-container>
+
+    <br />
+    <f-container>
+      <f-form-container>
+        <f-heading tag="h2">Images</f-heading>
+        <f-divider />
+
+        <div>
+          <f-image
+            src="https://images.unsplash.com/photo-1506729623306-b5a934d88b53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
+          />
         </div>
       </f-form-container>
     </f-container>

@@ -53,6 +53,7 @@ export default {
 <style lang="postcss" scoped>
 .link {
   @apply no-underline;
+
   @apply input--default;
   @apply input--text-color-default;
 
@@ -66,7 +67,9 @@ export default {
 
   @apply input--border-default;
   @apply input--bg-color-default;
-  @apply input--size-medium;
+  @apply input--box-shadow;
+
+  @apply btn--size-medium;
 
   &:hover {
     @apply no-underline;

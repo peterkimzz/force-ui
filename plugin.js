@@ -28,6 +28,8 @@ module.exports = plugin.withOptions(
         '.input--default': {
           outline: 'none',
           display: 'inline-block',
+        },
+        '.input--box-shadow': {
           boxShadow: config('theme.boxShadow.sm')
         },
         '.input--border-default': {
@@ -47,7 +49,7 @@ module.exports = plugin.withOptions(
         },
         '.input--outline': {
           boxShadow: config('theme.boxShadow.outline-gray'),
-          transitionProperty: config('theme.transitionProperty.default'),
+          transitionProperty: config('theme.transitionProperty.boxShadow'),
           transitionDuration: config('theme.transitionDuration.150'),
           transitionTimingFunction: config('theme.transitionTimingFunction.in-out'),
         },
@@ -56,21 +58,21 @@ module.exports = plugin.withOptions(
           paddingBottom: config('theme.spacing.1'),
           paddingLeft: config('theme.spacing.3'),
           paddingRight: config('theme.spacing.3'),
-          fontSize: config('theme.fontSize.xs')
+          fontSize: config('theme.fontSize.sm')
         },
         '.input--size-medium': {
           paddingTop: config('theme.spacing.2'),
           paddingBottom: config('theme.spacing.2'),
           paddingLeft: config('theme.spacing.4'),
           paddingRight: config('theme.spacing.4'),
-          fontSize: config('theme.fontSize.sm')
+          fontSize: config('theme.fontSize.base')
         },
         '.input--size-large': {
           paddingTop: config('theme.spacing.3'),
           paddingBottom: config('theme.spacing.3'),
           paddingLeft: config('theme.spacing.5'),
           paddingRight: config('theme.spacing.5'),
-          fontSize: config('theme.fontSize.base')
+          fontSize: config('theme.fontSize.lg')
         }
       }
 

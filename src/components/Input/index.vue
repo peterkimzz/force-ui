@@ -37,6 +37,7 @@ export default {
   @apply input--border-default;
   @apply input--text-color-default;
   @apply input--bg-color-default;
+  @apply input--box-shadow;
 
   &:focus {
     @apply shadow-outline-gray;

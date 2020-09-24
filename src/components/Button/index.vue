@@ -89,6 +89,7 @@ export default {
 
   @apply input--default;
   @apply input--border-default;
+  @apply input--box-shadow;
 
   &:focus {
     @apply input--outline;
@@ -129,9 +130,14 @@ export default {
     @apply input--bg-color-default-hover;
   }
 }
+.f-button--default.plain {
+  @apply bg-gray-200;
+  @apply text-gray-700;
+}
 
 .f-button--primary {
   @apply bg-primary-500;
+  @apply border-primary-100;
   @apply text-white;
 
   &:hover {
