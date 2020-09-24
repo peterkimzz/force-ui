@@ -1,27 +1,30 @@
 # Force UI
 
-Web UI framework with `tailwindcss`
+Don't customize theme, just use it.
+
+**Force UI** is vue css framework. Now supports Vue 2.0, but Vue 3.0 soon.
+
+Inspired by **Tailwind CSS**.
 
 ## Installation
 
 ```zsh
 $ yarn add force-ui # or npm add force-ui
+$ yarn add @tailwindcss/ui # dependency
 ```
 
 ## Prerequisite
+
+This package depends on **@tailwindcss/ui** package. That supports powerful extenstions and features of **Tailwind CSS** like more specific colors and detail spacing.
+
+So we have to import both **@tailwindcss/ui** and **force-ui/plugin** in order.
 
 ```js
 // tailwind.config.js
 
 module.exports = {
   // ...
-  theme: {
-    extend: {
-      colors: {
-        primary: '#CC4D29'
-      }
-    }
-  }
+  plugins: [require('@tailwindcss/ui'), require('force-ui/plugin')]
   // ...
 }
 ```
@@ -56,29 +59,10 @@ module.exports {
 
 ## Usage
 
-in `.vue` file
-
 ```vue
 <template>
   <div>
-    <div>Hello, {{ ui }}</div>
-    <f-button>Press me</f-button>
+    <f-button>Hello, Force UI!</f-button>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      ui: 'Force UI'
-    }
-  }
-}
-</script>
-
-<style lang="postcss" scoped>
-.container {
-  color: green;
-}
-</style>
 ```
