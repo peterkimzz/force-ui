@@ -1,6 +1,8 @@
 import Vue from 'vue'
 
 const isProd = process.env.NODE_ENV === 'production'
+
+// isProd ? import('') : () => import('')
 // if (isProd) {
 
 // }

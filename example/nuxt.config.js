@@ -2,7 +2,7 @@ export default {
   server: {
     port: 3001
   },
-  target: 'server',
+  target: 'static',
   head: {
     title: process.env.npm_package_name || '',
     meta: [
