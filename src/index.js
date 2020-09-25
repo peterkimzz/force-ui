@@ -6,6 +6,7 @@ import FFormFlexContainer from './components/Container/FormFlex'
 import FInputContainer from './components/Container/Input'
 
 import FIcon from './components/Icon'
+
 import FTitle from './components/Title'
 import FImage from './components/Image'
 import FButton from './components/Button'
@@ -33,6 +34,7 @@ const install = (Vue, options) => {
   Vue.component(FFormFlexContainer.name, FFormFlexContainer)
   Vue.component(FInputContainer.name, FInputContainer)
 
+  Vue.component(FIcon.name, FIcon)
   Vue.component(FTitle.name, FTitle)
   Vue.component(FImage.name, FImage)
   Vue.component(FButton.name, FButton)
@@ -45,7 +47,6 @@ const install = (Vue, options) => {
   Vue.component(FRadio.name, FRadio)
   Vue.component(FCopyright.name, FCopyright)
 
-  Vue.component(FIcon.name, FIcon)
 
   Vue.component(FSlide.name, FSlide)
   Vue.component(FModal.name, FModal)
@@ -63,6 +64,7 @@ export {
   FFormFlexContainer,
   FInputContainer,
 
+  FIcon,
   FTitle,
   FImage,
   FButton,

@@ -3,6 +3,17 @@
 </template>
 
 <script>
+import './Alert.vue'
+import './Close.vue'
+import './Facebook.vue'
+import './Github.vue'
+import './Google.vue'
+import './Instagram.vue'
+import './Pinterest.vue'
+import './Plus.vue'
+import './Trash.vue'
+import './Twitter.vue'
+import './User.vue'
 export default {
   name: 'FIcon',
   props: {
