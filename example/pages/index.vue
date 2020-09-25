@@ -1,11 +1,10 @@
 <template>
   <div id="page">
     <div class="container"></div>
-
     <f-container>
       <f-title
         title="Components"
-        description="Don't customize, just use it. - Inspired by Tailwind CSS"
+        description="Don't customize theme, just use it - Made by Tailwind CSS"
       />
     </f-container>
 
@@ -27,37 +26,33 @@
 
       <f-container>
         <f-form-container>
-          <f-form-flex-container
-            title="Buttons"
-            description="Support default, plain, black and primary, secondary."
-          >
-            <div>
+          <f-form-flex-container title="Buttons">
+            <div class="space-x-2">
               <f-button size="small">Small button</f-button>
               <f-button>Medium button</f-button>
               <f-button size="large">Large button</f-button>
             </div>
 
-            <div>
+            <div class="space-x-2">
               <f-button plain size="small">Small plain button</f-button>
               <f-button plain>Medium plain button</f-button>
               <f-button plain size="large">Large plain button</f-button>
             </div>
 
-            <div>
+            <div class="space-x-2">
               <f-button type="black" size="small">Small black button</f-button>
               <f-button type="black">Medium black button</f-button>
               <f-button type="black" size="large">Large black button</f-button>
             </div>
 
-            <div>
+            <div class="space-x-2">
               <f-button type="ghost" size="small">Ghost button</f-button>
               <f-button type="ghost">Ghost button</f-button>
               <f-button type="ghost" size="large">Ghost button</f-button>
             </div>
 
-            <div>
+            <div class="space-x-2">
               <f-button prefix-icon="Plus">Add to favorite</f-button>
-              <f-button suffix-icon="Trash" plain>Remove</f-button>
             </div>
           </f-form-flex-container>
           <f-divider />

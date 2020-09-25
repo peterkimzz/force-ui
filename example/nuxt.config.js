@@ -34,5 +34,7 @@ export default {
   plugins: [
     { src: '~/plugins/force-ui' }
   ],
-  components: true,
+  components: [
+    { path: '~/components/', prefix: 'vue' }
+  ],
 }

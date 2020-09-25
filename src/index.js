@@ -26,6 +26,9 @@ import FDialog from './components/Dialog'
 import FNavigationBar from './components/NavigationBar'
 import FNavigationBarItem from './components/NavigationBar/Item'
 
+import FTab from './components/Tab'
+import FTabItem from './components/Tab/Item'
+
 const install = (Vue, options) => {
   if (install.installed) return
 
@@ -35,6 +38,7 @@ const install = (Vue, options) => {
   Vue.component(FInputContainer.name, FInputContainer)
 
   Vue.component(FIcon.name, FIcon)
+
   Vue.component(FTitle.name, FTitle)
   Vue.component(FImage.name, FImage)
   Vue.component(FButton.name, FButton)
@@ -47,13 +51,14 @@ const install = (Vue, options) => {
   Vue.component(FRadio.name, FRadio)
   Vue.component(FCopyright.name, FCopyright)
 
-
   Vue.component(FSlide.name, FSlide)
   Vue.component(FModal.name, FModal)
   Vue.component(FDialog.name, FDialog)
 
   Vue.component(FNavigationBar.name, FNavigationBar)
   Vue.component(FNavigationBarItem.name, FNavigationBarItem)
+  Vue.component(FTab.name, FTab)
+  Vue.component(FTabItem.name, FTabItem)
 
   Vue.use(vClickOutside)
 }
@@ -82,7 +87,9 @@ export {
   FModal,
 
   FNavigationBar,
-  FNavigationBarItem
+  FNavigationBarItem,
+  FTab,
+  FTabItem
 }
 
 export default install
