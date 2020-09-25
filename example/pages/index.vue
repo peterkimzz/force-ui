@@ -167,13 +167,13 @@
         <f-form-container>
           <f-form-flex-container title="Anchors">
             <f-input-container label="Default style link">
-              Lorem ipsum dolor sit, <f-link href="/links">Default</f-link> amet
+              Lorem ipsum dolor sit, <f-link href="/labs">Default</f-link> amet
               consectetur adipisicing elit. Harum dicta quasi a quis ullam quia,
               distinctio ab saepe voluptatibus ipsam vero. Modi autem tempore
               laboriosam voluptates, eaque error nostrum voluptas.
             </f-input-container>
             <f-input-container label="Button style link">
-              <f-link href="/links" type="button">Button link</f-link>
+              <f-link href="/labs" type="button">Button link</f-link>
             </f-input-container>
           </f-form-flex-container>
         </f-form-container>
