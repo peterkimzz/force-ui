@@ -1,10 +1,18 @@
 import Vue from 'vue'
 
-console.log('node_env: ', process.env.NODE_ENV)
+const isProd = process.env.NODE_ENV === 'production'
+// if (isProd) {
 
-import ForceUI from '../../../dist/force-ui.umd.min.js'
-import '../../../dist/force-ui.css'
+// }
+// else {
 
-// import ForceUI from '../../../src'
+// }
+console.log({ isProd })
+
+// import ForceUI from '../../../dist/force-ui.umd.min.js'
+// import '../../../dist/force-ui.css'
+
+import ForceUI from 'force-ui'
+import 'force-ui/dist/force-ui.css'
 
 Vue.use(ForceUI)

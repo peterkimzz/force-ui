@@ -5,7 +5,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  plugins: [require('@tailwindcss/ui'), require('../plugin')],
+  plugins: [require('@tailwindcss/ui'), require('force-ui/plugin')],
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
