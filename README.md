@@ -6,7 +6,7 @@ The goal of Force UI is supporting 100% designed component for responsive UI wit
 
 **Force UI** is CSS framework for Vue. Now supported in Vue 2.0, but Vue 3.0 soon.
 
-Made by **Tailwind CSS**.
+Made by **Tailwind CSS** for styling, **Heroicons** for vector icons.
 
 ## Live demo
 
