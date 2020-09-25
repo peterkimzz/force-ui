@@ -10,10 +10,8 @@
     "serve": "nuxt serve"
   },
   "dependencies": {
+    "@nuxtjs/tailwindcss": "^3.0.2",
     "@tailwindcss/ui": "^0.6.2",
     "nuxt": "^2.14.6"
-  },
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.0.2"
   }
 }

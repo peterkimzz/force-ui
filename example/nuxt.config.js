@@ -19,10 +19,7 @@ export default {
   buildModules: ['@nuxtjs/tailwindcss'],
   modules: [],
   plugins: [
-    {
-      src: '~/plugins/force-ui'
-    }
+    { src: '~/plugins/force-ui' }
   ],
   components: true,
-  build: {}
 }
