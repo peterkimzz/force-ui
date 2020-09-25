@@ -1,5 +1,7 @@
 <template>
   <div id="page">
+    <div class="container"></div>
+
     <f-container>
       <f-title
         title="Components"

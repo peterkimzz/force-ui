@@ -1,20 +1,14 @@
 import Vue from 'vue'
+let ForceUI
 
 const isProd = process.env.NODE_ENV === 'production'
 
-// isProd ? import('') : () => import('')
-// if (isProd) {
-
-// }
-// else {
-
-// }
-console.log({ isProd })
-
-// import ForceUI from '../../../dist/force-ui.umd.min.js'
-// import '../../../dist/force-ui.css'
-
-import ForceUI from 'force-ui'
-import 'force-ui/dist/force-ui.css'
+if (isProd) {
+  ForceUI = require('force-ui').default
+  require('force-ui/dist/force-ui.css')
+}
+else {
+  ForceUI = require('../../../src').default
+}
 
 Vue.use(ForceUI)
