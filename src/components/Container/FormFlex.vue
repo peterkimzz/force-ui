@@ -43,8 +43,8 @@ export default {
   }
 
   @screen md {
-    @apply w-3/5;
     @apply mr-6;
+    @apply w-5/6;
   }
 }
 .form-flex--left-desc {

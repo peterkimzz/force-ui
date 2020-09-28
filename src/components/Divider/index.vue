@@ -11,11 +11,12 @@ export default {
 <style lang="postcss" scoped>
 .divider {
   @apply h-px;
-  @apply my-4;
   @apply bg-gray-200;
 
+  @apply my-4;
+
   @screen md {
-    @apply my-6;
+    @apply my-5;
   }
 }
 </style>

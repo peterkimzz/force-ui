@@ -24,12 +24,9 @@
               class="relative w-screen max-w-md"
             >
               <div
-                class="h-full pb-10 flex flex-col space-y-6 bg-white shadow-xl overflow-y-scroll"
+                class="h-full pb-10 flex flex-col bg-white shadow-xl overflow-y-scroll"
               >
                 <header class="slide--header-container">
-                  <h2 v-show="title" class="slide--header__title">
-                    {{ title }}
-                  </h2>
                   <f-button
                     aria-label="Close slide"
                     class="slide--header__close"
@@ -38,10 +35,13 @@
                   >
                     <f-icon icon="Close" />
                   </f-button>
+                  <span v-if="title" class="slide--header__title">
+                    {{ title }}
+                  </span>
                 </header>
-                <div class="relative flex-1">
+                <ul class="slide--content-container">
                   <slot />
-                </div>
+                </ul>
               </div>
             </div>
           </transition>
@@ -117,7 +117,12 @@ export default {
   @apply px-4 py-6;
 }
 .slide--header__title {
-  @apply text-base text-gray-900;
-  @apply font-semibold;
+  /* @apply text-base text-gray-900;
+  @apply font-semibold; */
+}
+
+.slide--content-container {
+  @apply relative flex-1;
+  @apply px-4 py-6;
 }
 </style>

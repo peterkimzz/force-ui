@@ -1,3 +1,14 @@
+const isProd = process.env.NODE_ENV === 'production'
+
+const plugins = [require('@tailwindcss/ui')]
+
+if (isProd) {
+  plugins.push(require('force-ui/plugin'))
+}
+else {
+  plugins.push(require('../plugin'))
+}
+
 module.exports = {
   variants: {},
   important: true,
@@ -5,7 +16,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  plugins: [require('@tailwindcss/ui'), require('force-ui/plugin')],
+  plugins,
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [

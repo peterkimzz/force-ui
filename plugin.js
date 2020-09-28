@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
 const fontSize = {
@@ -29,7 +30,10 @@ module.exports = plugin.withOptions(
         '.input--default': {
           outline: 'none',
           display: 'inline-block',
-          maxWidth: '100%'
+          maxWidth: '100%',
+          transitionProperty: config('theme.transitionProperty.all'),
+          transitionDuration: config('theme.transitionDuration.150'),
+          transitionTimingFunction: config('theme.transitionTimingFunction.in-out'),
         },
         '.input--box-shadow': {
           boxShadow: config('theme.boxShadow.sm')
@@ -51,60 +55,32 @@ module.exports = plugin.withOptions(
         },
         '.input--outline': {
           boxShadow: config('theme.boxShadow.outline-gray'),
-          transitionProperty: config('theme.transitionProperty.boxShadow'),
-          transitionDuration: config('theme.transitionDuration.150'),
-          transitionTimingFunction: config('theme.transitionTimingFunction.in-out'),
         },
         '.input--size-small': {
-          paddingTop: config('theme.spacing.1'),
-          paddingBottom: config('theme.spacing.1'),
-          paddingLeft: config('theme.spacing.3'),
-          paddingRight: config('theme.spacing.3'),
-          fontSize: config('theme.fontSize.sm')
-        },
-        '.input--size-medium': {
-          paddingTop: config('theme.spacing.2'),
-          paddingBottom: config('theme.spacing.2'),
-          paddingLeft: config('theme.spacing.4'),
-          paddingRight: config('theme.spacing.4'),
-          fontSize: config('theme.fontSize.base')
-        },
-        '.input--size-large': {
-          paddingTop: config('theme.spacing.3'),
-          paddingBottom: config('theme.spacing.3'),
-          paddingLeft: config('theme.spacing.5'),
-          paddingRight: config('theme.spacing.5'),
-          fontSize: config('theme.fontSize.lg')
-        }
-      }
-
-      const ButtonUtility = {
-        '.btn--size-small': {
           paddingTop: config('theme.spacing[1.5]'),
           paddingBottom: config('theme.spacing[1.5]'),
           paddingLeft: config('theme.spacing.4'),
           paddingRight: config('theme.spacing.4'),
           fontSize: config('theme.fontSize.xs')
         },
-        '.btn--size-medium': {
+        '.input--size-medium': {
           paddingTop: config('theme.spacing.2'),
           paddingBottom: config('theme.spacing.2'),
-          paddingLeft: config('theme.spacing.5'),
-          paddingRight: config('theme.spacing.5'),
+          paddingLeft: config('theme.spacing.4'),
+          paddingRight: config('theme.spacing.4'),
           fontSize: config('theme.fontSize.sm')
         },
-        '.btn--size-large': {
+        '.input--size-large': {
           paddingTop: config('theme.spacing.3'),
           paddingBottom: config('theme.spacing.3'),
-          paddingLeft: config('theme.spacing.6'),
-          paddingRight: config('theme.spacing.6'),
+          paddingLeft: config('theme.spacing.5'),
+          paddingRight: config('theme.spacing.5'),
           fontSize: config('theme.fontSize.base')
         }
       }
 
       addUtilities({
-        ...InputUtility,
-        ...ButtonUtility
+        ...InputUtility
       })
     }
   },
@@ -112,6 +88,12 @@ module.exports = plugin.withOptions(
     return {
       theme: {
         fontSize,
+        fontFamily: {
+          sans: [
+            'Inter',
+            ...defaultTheme.fontFamily.sans
+          ]
+        },
         extend: {
           colors: {
             primary: {

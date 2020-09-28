@@ -37,23 +37,31 @@ export default {
 
 <style lang="postcss" scoped>
 .checkbox {
-  @apply inline-flex items-center;
+  @apply input--text-color-default;
+  @apply py-1;
+
+  @apply flex items-center;
   @apply cursor-pointer;
 }
 
 .form-checkbox {
   @apply input--text-color-default;
+  @apply input--default;
+  @apply border-gray-300;
+
   @apply cursor-pointer;
 
   &:focus {
     @apply input--outline;
-    @apply border-gray-300;
   }
 }
 
 .form-checkbox--text {
-  @apply cursor-pointer;
-  @apply input--text-color-default;
   @apply ml-2;
+  @apply text-xs;
+
+  @screen md {
+    @apply text-sm;
+  }
 }
 </style>

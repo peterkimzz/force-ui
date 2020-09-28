@@ -2,7 +2,7 @@
   <button
     :class="[
       'f-button',
-      'f-button--' + type,
+      'f-button--' + color,
       'f-button--' + size,
       {
         plain,
@@ -12,7 +12,7 @@
     ]"
     @click="OnClick"
   >
-    <span class="flex items-center">
+    <span class="flex items-center justify-center">
       <f-icon v-if="prefixIcon" :icon="prefixIcon" class="mr-2" />
       <slot />
       <f-icon v-if="suffixIcon" :icon="suffixIcon" class="ml-2" />
@@ -25,6 +25,10 @@ export default {
   name: 'FButton',
   props: {
     type: {
+      type: String,
+      default: 'button'
+    },
+    color: {
       type: String,
       required: false,
       default: 'default',
@@ -105,9 +109,14 @@ export default {
   @apply input--border-default;
   @apply input--box-shadow;
   @apply align-middle;
+  @apply w-full;
 
   &:focus {
     @apply input--outline;
+  }
+
+  @screen md {
+    @apply w-auto;
   }
 }
 .f-button.round {
@@ -120,24 +129,27 @@ export default {
 
 /** Size */
 .f-button--small {
-  @apply btn--size-small;
+  @apply input--size-small;
 }
 .f-button--small.round {
   @apply p-1;
+  @apply w-auto;
 }
 
 .f-button--medium {
-  @apply btn--size-medium;
+  @apply input--size-medium;
 }
 .f-button--medium.round {
   @apply p-2;
+  @apply w-auto;
 }
 
 .f-button--large {
-  @apply btn--size-large;
+  @apply input--size-large;
 }
 .f-button--large.round {
   @apply p-4;
+  @apply w-auto;
 }
 
 /** Type */

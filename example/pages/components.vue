@@ -40,15 +40,15 @@
             </div>
 
             <div class="space-x-2">
-              <f-button type="black" size="small">Small black button</f-button>
-              <f-button type="black">Medium black button</f-button>
-              <f-button type="black" size="large">Large black button</f-button>
+              <f-button color="black" size="small">Small black button</f-button>
+              <f-button color="black">Medium black button</f-button>
+              <f-button color="black" size="large">Large black button</f-button>
             </div>
 
             <div class="space-x-2">
-              <f-button type="ghost" size="small">Ghost button</f-button>
-              <f-button type="ghost">Ghost button</f-button>
-              <f-button type="ghost" size="large">Ghost button</f-button>
+              <f-button color="ghost" size="small">Ghost button</f-button>
+              <f-button color="ghost">Ghost button</f-button>
+              <f-button color="ghost" size="large">Ghost button</f-button>
             </div>
 
             <div class="space-x-2">
@@ -86,6 +86,7 @@
                   { title: 'Force UI', value: 2 }
                 ]"
                 placeholder="Select item"
+                block
               />
             </f-input-container>
           </f-form-flex-container>
@@ -100,7 +101,7 @@
             </f-input-container>
             <f-input-container label="Notifications">
               <f-checkbox>Email notification</f-checkbox>
-              <f-checkbox class="ml-2">SMS notification</f-checkbox>
+              <f-checkbox>SMS notification</f-checkbox>
             </f-input-container>
           </f-form-flex-container>
           <f-divider />
@@ -151,16 +152,15 @@
               <f-button plain @click="dialog = true">Open</f-button>
             </f-input-container>
             <f-input-container label="Center modal">
-              <f-button type="black" @click="modal = true">Open</f-button>
+              <f-button color="black" @click="modal = true">Open</f-button>
             </f-input-container>
           </f-form-flex-container>
 
-          <f-slide v-model="slide"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-            eos sit dolor animi ullam vel molestiae enim! Quae, nihil? Dicta
-            itaque modi quis eum possimus ducimus laborum exercitationem,
-            architecto atque.</f-slide
-          >
+          <f-slide v-model="slide" title="Slider">
+            <f-slide-item>Home</f-slide-item>
+            <f-slide-item>Components</f-slide-item>
+            <f-slide-item>Examples</f-slide-item>
+          </f-slide>
           <f-dialog v-model="dialog"
             >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit vel
             esse commodi impedit quia accusamus vitae distinctio aspernatur

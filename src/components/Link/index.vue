@@ -69,7 +69,7 @@ export default {
   @apply input--bg-color-default;
   @apply input--box-shadow;
 
-  @apply btn--size-medium;
+  @apply input--size-medium;
 
   &:hover {
     @apply no-underline;

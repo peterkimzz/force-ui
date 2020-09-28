@@ -22,6 +22,7 @@ import FSelect from './components/Select'
 import FSelectItem from './components/Select/Item'
 
 import FSlide from './components/Slide'
+import FSlideItem from './components/Slide/Item'
 import FModal from './components/Modal'
 import FDialog from './components/Dialog'
 
@@ -56,6 +57,7 @@ const install = (Vue, options) => {
   Vue.component(FSelectItem.name, FSelectItem)
 
   Vue.component(FSlide.name, FSlide)
+  Vue.component(FSlideItem.name, FSlideItem)
   Vue.component(FModal.name, FModal)
   Vue.component(FDialog.name, FDialog)
 
@@ -89,6 +91,7 @@ export {
   FSelectItem,
 
   FSlide,
+  FSlideItem,
   FDialog,
   FModal,
 

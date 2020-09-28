@@ -59,7 +59,7 @@
             </div>
             <div class="modal--bottom-container">
               <f-button
-                type="black"
+                color="black"
                 class="modal--bottom-btn"
                 @click="$emit('input', false)"
                 >{{ confirmLabel }}</f-button

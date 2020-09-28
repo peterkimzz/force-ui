@@ -1,6 +1,6 @@
 {
   "name": "force-ui",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Don't customize theme, just use it. CSS framework for Vue.",
   "author": "peterkimzz <peterkimzz69@gmail.com>",
   "main": "dist/force-ui.umd.min.js",

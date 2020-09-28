@@ -1,40 +1,41 @@
 <template>
-  <div class="space-y-1" v-click-outside="() => (isOpen = false)">
-    <div class="relative">
-      <button
-        type="button"
-        aria-haspopup="listbox"
-        aria-expanded="true"
-        aria-labelledby="listbox-label"
-        class="select-btn"
-        @click="isOpen = !isOpen"
-      >
-        <div class="flex items-center space-x-3">
-          <span :class="['select-text', { unselected: !this.value }]">{{
-            SelectItemText
-          }}</span>
-        </div>
-        <span
-          class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
-        >
-          <f-icon icon="Selector" class="text-gray-400" />
-        </span>
-      </button>
-
-      <div v-show="isOpen && items.length" class="select--item-container">
-        <ul tabindex="-1" role="listbox" class="select--item-wrapper">
-          <f-select-item
-            v-for="item in items"
-            :key="item.title"
-            :value="item.value"
-            :active="value === item.value"
-            @click="OnSelectItem"
-            >{{ item.title }}</f-select-item
-          >
-        </ul>
+  <span
+    :class="['f-select', { block }]"
+    v-click-outside="() => (isOpen = false)"
+  >
+    <button
+      type="button"
+      aria-haspopup="listbox"
+      aria-expanded="true"
+      aria-labelledby="listbox-label"
+      class="select-btn"
+      @click="isOpen = !isOpen"
+    >
+      <div class="flex items-center space-x-3">
+        <span :class="['select-text', { unselected: !this.value }]">{{
+          SelectItemText
+        }}</span>
       </div>
+      <span
+        class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
+      >
+        <f-icon icon="Selector" class="text-gray-400" />
+      </span>
+    </button>
+
+    <div v-show="isOpen && items.length" class="select--item-container">
+      <ul tabindex="-1" role="listbox" class="select--item-wrapper">
+        <f-select-item
+          v-for="item in items"
+          :key="item.title"
+          :value="item.value"
+          :active="value === item.value"
+          @click="OnSelectItem"
+          >{{ item.title }}</f-select-item
+        >
+      </ul>
     </div>
-  </div>
+  </span>
 </template>
 
 <script>
@@ -52,6 +53,10 @@ export default {
     items: {
       type: Array,
       default: () => []
+    },
+    block: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -80,22 +85,32 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.f-select {
+  @apply relative;
+  @apply w-full;
+
+  @screen md {
+    min-width: 200px;
+    width: auto;
+  }
+}
+.f-select.block {
+  @apply inline-block !important;
+  @apply w-full;
+}
+
 .select-btn {
   @apply input--default;
   @apply input--box-shadow;
   @apply input--border-default;
   @apply input--text-color-default;
   @apply input--bg-color-default;
-
   @apply input--size-medium;
-  @apply font-semibold;
 
-  @apply w-full;
-
-  /* @apply cursor-default relative w-full rounded-lg border border-gray-300 bg-white pl-3 pr-10 py-2 text-left  transition ease-in-out duration-150; */
+  width: inherit;
 
   &:focus {
-    @apply outline-none shadow-outline-gray;
+    @apply input--outline;
   }
 }
 .select-text {

@@ -5,7 +5,7 @@
         <span class="input-container__label">{{ label }}</span>
         <span v-if="required" class="input-container__required-mark">*</span>
       </div>
-      <slot />
+      <slot required />
     </label>
   </div>
 </template>
@@ -28,6 +28,7 @@ export default {
 
 <style lang="postcss" scoped>
 .input-container {
+  /* @apply mt-4; */
   /* @apply flex-1; */
   /* flex-grow: 0;
   flex-shrink: 1;
@@ -35,11 +36,10 @@ export default {
 }
 
 .input-container__label {
-  @apply text-gray-700;
+  @apply text-gray-600;
   @apply font-medium;
-  @apply leading-5;
-  @apply mb-1.5;
   @apply text-xs;
+  @apply mb-1.5;
 
   @screen md {
     @apply text-sm;

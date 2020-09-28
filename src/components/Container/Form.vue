@@ -1,7 +1,10 @@
 <template>
-  <div :class="['form-container', 'form-container--' + type, { noBorder }]">
+  <form
+    @submit.prevent="$emit('on-submit')"
+    :class="['form-container', 'form-container--' + type, { noBorder }]"
+  >
     <slot />
-  </div>
+  </form>
 </template>
 
 <script>

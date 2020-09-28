@@ -56,24 +56,28 @@ export default {
 
 <style lang="postcss" scoped>
 .radio {
-  @apply inline-flex;
-  @apply items-center;
+  @apply input--text-color-default;
+
+  @apply inline-flex items-center;
   @apply cursor-pointer;
 }
 
 .form-radio {
   @apply input--text-color-default;
-  @apply cursor-pointer;
+  @apply input--default;
 
   &:focus {
     @apply input--outline;
-    @apply border-gray-300;
   }
 }
 
 .form-radio--text {
-  @apply cursor-pointer;
-  @apply input--text-color-default;
   @apply ml-2;
+  @apply text-xs;
+  @apply cursor-pointer;
+
+  @screen md {
+    @apply text-sm;
+  }
 }
 </style>
