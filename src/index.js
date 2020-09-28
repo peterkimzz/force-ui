@@ -18,6 +18,8 @@ import FDivider from './components/Divider'
 import FCheckbox from './components/Checkbox'
 import FRadio from './components/Radio'
 import FCopyright from './components/Copyright'
+import FSelect from './components/Select'
+import FSelectItem from './components/Select/Item'
 
 import FSlide from './components/Slide'
 import FModal from './components/Modal'
@@ -50,6 +52,8 @@ const install = (Vue, options) => {
   Vue.component(FCheckbox.name, FCheckbox)
   Vue.component(FRadio.name, FRadio)
   Vue.component(FCopyright.name, FCopyright)
+  Vue.component(FSelect.name, FSelect)
+  Vue.component(FSelectItem.name, FSelectItem)
 
   Vue.component(FSlide.name, FSlide)
   Vue.component(FModal.name, FModal)
@@ -81,6 +85,8 @@ export {
   FCheckbox,
   FRadio,
   FCopyright,
+  FSelect,
+  FSelectItem,
 
   FSlide,
   FDialog,
