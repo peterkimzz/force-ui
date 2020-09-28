@@ -35,13 +35,14 @@ export default {
 }
 
 .input-container__label {
-  @apply text-gray-600;
-  @apply font-semibold;
+  @apply text-gray-700;
+  @apply font-medium;
+  @apply leading-5;
   @apply mb-1.5;
-  @apply text-sm;
+  @apply text-xs;
 
   @screen md {
-    @apply text-base;
+    @apply text-sm;
   }
 }
 .input-container__required-mark {

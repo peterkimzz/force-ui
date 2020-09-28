@@ -14,6 +14,7 @@ import './Plus.vue'
 import './Trash.vue'
 import './Twitter.vue'
 import './User.vue'
+import './Selector.vue'
 export default {
   name: 'FIcon',
   props: {

@@ -99,7 +99,7 @@ export default {
 
 <style lang="postcss" scoped>
 .f-button {
-  @apply font-bold;
+  @apply font-semibold;
 
   @apply input--default;
   @apply input--border-default;

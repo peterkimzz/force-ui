@@ -8,8 +8,12 @@ export default {
     return {
       items: [
         {
-          title: 'Components',
+          title: 'Installation',
           href: '/'
+        },
+        {
+          title: 'Components',
+          href: '/components'
         },
         {
           title: 'Examples',
