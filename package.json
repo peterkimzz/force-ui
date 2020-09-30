@@ -4,9 +4,10 @@
   "description": "Don't customize theme, just use it. CSS framework for Vue.",
   "author": "peterkimzz <peterkimzz69@gmail.com>",
   "main": "dist/force-ui.umd.min.js",
-  "style": "dist/force-ui",
+  "style": "dist/force-ui.css",
   "files": [
-    "dist/*",
+    "dist/force-ui.umd.min.js",
+    "dist/force-ui.css",
     "plugin.js"
   ],
   "license": "MIT",
