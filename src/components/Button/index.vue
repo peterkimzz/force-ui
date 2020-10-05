@@ -12,7 +12,8 @@
     ]"
     @click="OnClick"
   >
-    <span class="flex items-center justify-center">
+    <f-spinner v-if="loading" class="" />
+    <span v-else class="flex items-center justify-center">
       <f-icon v-if="prefixIcon" :icon="prefixIcon" class="mr-2" />
       <slot />
       <f-icon v-if="suffixIcon" :icon="suffixIcon" class="ml-2" />
@@ -81,6 +82,10 @@ export default {
       default: false
     },
     block: {
+      type: Boolean,
+      default: false
+    },
+    loading: {
       type: Boolean,
       default: false
     }

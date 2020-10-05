@@ -2,6 +2,7 @@
   <span
     :class="['f-select', { block }]"
     v-click-outside="() => (isOpen = false)"
+    @keydown.esc="OnEsc"
   >
     <button
       type="button"
@@ -79,6 +80,9 @@ export default {
   methods: {
     OnSelectItem(v) {
       this.$emit('input', v)
+    },
+    OnEsc() {
+      this.isOpen = false
     }
   }
 }

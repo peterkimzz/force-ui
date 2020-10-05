@@ -6,6 +6,7 @@ import FFormFlexContainer from './components/Container/FormFlex'
 import FInputContainer from './components/Container/Input'
 
 import FIcon from './components/Icon'
+import FSpinner from './components/Spinner'
 
 import FTitle from './components/Title'
 import FImage from './components/Image'
@@ -18,6 +19,7 @@ import FDivider from './components/Divider'
 import FCheckbox from './components/Checkbox'
 import FRadio from './components/Radio'
 import FCopyright from './components/Copyright'
+import FDropdown from './components/Dropdown'
 import FSelect from './components/Select'
 import FSelectItem from './components/Select/Item'
 
@@ -41,6 +43,7 @@ const install = (Vue, options) => {
   Vue.component(FInputContainer.name, FInputContainer)
 
   Vue.component(FIcon.name, FIcon)
+  Vue.component(FSpinner.name, FSpinner)
 
   Vue.component(FTitle.name, FTitle)
   Vue.component(FImage.name, FImage)
@@ -53,6 +56,7 @@ const install = (Vue, options) => {
   Vue.component(FCheckbox.name, FCheckbox)
   Vue.component(FRadio.name, FRadio)
   Vue.component(FCopyright.name, FCopyright)
+  Vue.component(FDropdown.name, FDropdown)
   Vue.component(FSelect.name, FSelect)
   Vue.component(FSelectItem.name, FSelectItem)
 
@@ -76,6 +80,8 @@ export {
   FInputContainer,
 
   FIcon,
+  FSpinner,
+
   FTitle,
   FImage,
   FButton,
@@ -87,6 +93,7 @@ export {
   FCheckbox,
   FRadio,
   FCopyright,
+  FDropdown,
   FSelect,
   FSelectItem,
 

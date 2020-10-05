@@ -53,6 +53,7 @@
 
             <div class="space-x-2">
               <f-button prefix-icon="Plus">Add to favorite</f-button>
+              <f-button loading color="black" />
             </div>
           </f-form-flex-container>
           <f-divider />
@@ -88,6 +89,26 @@
                 placeholder="Select item"
                 block
               />
+            </f-input-container>
+          </f-form-flex-container>
+        </f-form-container>
+      </f-container>
+
+      <f-container>
+        <f-form-container>
+          <f-form-flex-container title="Dropdowns">
+            <f-input-container label="Default style select">
+              <f-dropdown suffix-icon="ArrowDown" />
+
+              <f-dropdown placeholder="Filter">
+                <div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam animi, laudantium ipsa velit rem, nostrum
+                  necessitatibus, aliquam eos error perspiciatis cupiditate
+                  culpa provident perferendis? Quos exercitationem accusamus
+                  animi quaerat expedita!
+                </div>
+              </f-dropdown>
             </f-input-container>
           </f-form-flex-container>
         </f-form-container>
@@ -168,12 +189,14 @@
             nisi soluta, id eligendi doloremque.</f-dialog
           >
 
-          <f-modal v-model="modal"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nemo
-            veritatis, ipsa, autem architecto, porro natus excepturi reiciendis
-            quisquam obcaecati magnam minima! Sed non consequuntur, repellendus
-            velit veniam commodi odit?</f-modal
-          >
+          <f-modal v-model="modal" @on-confirm="modal = false">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nemo
+              veritatis, ipsa, autem architecto, porro natus excepturi
+              reiciendis quisquam obcaecati magnam minima! Sed non consequuntur,
+              repellendus velit veniam commodi odit?
+            </p>
+          </f-modal>
         </f-form-container>
       </f-container>
 
