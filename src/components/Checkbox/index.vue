@@ -1,5 +1,5 @@
 <template>
-  <label class="checkbox">
+  <label :class="['f-checkbox', 'block']">
     <input
       :id="uuid"
       type="checkbox"
@@ -20,6 +20,10 @@ export default {
       type: Boolean,
       default: false
     },
+    block: {
+      type: Boolean,
+      default: false
+    },
     description: {
       type: String
     }
@@ -36,7 +40,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.checkbox {
+.f-checkbox {
   @apply input--text-color-default;
   @apply py-1;
 

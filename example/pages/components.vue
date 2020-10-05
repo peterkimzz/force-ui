@@ -1,14 +1,15 @@
 <template>
   <div id="page">
-    <div class="container"></div>
     <f-container>
       <f-title
+        sub-title="Force UI"
         title="Components"
         description="Don't customize theme, just use it - Made by Tailwind CSS"
       />
     </f-container>
 
     <div class="space-y-8">
+      <!-- Headings -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Headings" description="1 to 6 choices">
@@ -24,6 +25,7 @@
         </f-form-container>
       </f-container>
 
+      <!-- Buttons -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Buttons">
@@ -76,6 +78,7 @@
         </f-form-container>
       </f-container>
 
+      <!-- Selects -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Selects">
@@ -94,10 +97,11 @@
         </f-form-container>
       </f-container>
 
+      <!-- Dropdowns -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Dropdowns">
-            <f-input-container label="Default style select">
+            <f-input-container label="Default style dropdown">
               <f-dropdown suffix-icon="ArrowDown" />
 
               <f-dropdown placeholder="Filter">
@@ -114,6 +118,7 @@
         </f-form-container>
       </f-container>
 
+      <!-- Checkboxes -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Checkboxes">
@@ -131,10 +136,15 @@
               <f-radio v-model="radio" label="1">Man</f-radio>
               <f-radio v-model="radio" label="2" class="ml-2">Woman</f-radio>
             </f-input-container>
+            <f-input-container label="Block radios">
+              <f-radio v-model="radio" full label="1">Man</f-radio>
+              <f-radio v-model="radio" full label="2">Woman</f-radio>
+            </f-input-container>
           </f-form-flex-container>
         </f-form-container>
       </f-container>
 
+      <!-- Inputs -->
       <f-container>
         <f-form-container type="error">
           <f-form-flex-container title="Inputs">
@@ -153,16 +163,17 @@
           <f-form-flex-container title="Inline inputs">
             <div class="flex space-x-2">
               <f-input-container required label="First name">
-                <f-input class="block" />
+                <f-input />
               </f-input-container>
               <f-input-container label="Last name">
-                <f-input class="block" />
+                <f-input />
               </f-input-container>
             </div>
           </f-form-flex-container>
         </f-form-container>
       </f-container>
 
+      <!-- Modals -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Modals">
@@ -200,6 +211,7 @@
         </f-form-container>
       </f-container>
 
+      <!-- Anchors (Links) -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Anchors">
@@ -216,6 +228,7 @@
         </f-form-container>
       </f-container>
 
+      <!-- Tags -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Tags">
@@ -244,6 +257,7 @@
         </f-form-container>
       </f-container>
 
+      <!-- Images -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Images">
@@ -257,6 +271,7 @@
         </f-form-container>
       </f-container>
 
+      <!-- Copyrights -->
       <f-container>
         <f-form-container>
           <f-form-flex-container title="Copyright">

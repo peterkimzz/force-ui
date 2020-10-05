@@ -1,5 +1,5 @@
 <template>
-  <label class="radio">
+  <label :class="['f-radio', { full }]">
     <input
       :id="uuid"
       ref="radio"
@@ -19,6 +19,10 @@ export default {
     value: {
       type: null,
       default: null
+    },
+    full: {
+      type: Boolean,
+      default: false
     },
     label: {
       type: String,
@@ -55,11 +59,16 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.radio {
+.f-radio {
   @apply input--text-color-default;
 
   @apply inline-flex items-center;
   @apply cursor-pointer;
+
+  @apply py-1;
+}
+.f-radio.full {
+  @apply w-full;
 }
 
 .form-radio {

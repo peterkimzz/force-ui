@@ -2,7 +2,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 export default {
   server: {
-    port: 3001
+    port: 4000
   },
   ssr: false,
   target: 'static',

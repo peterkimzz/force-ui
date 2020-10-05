@@ -56,6 +56,9 @@ module.exports = plugin.withOptions(
         '.input--outline': {
           boxShadow: config('theme.boxShadow.outline-gray'),
         },
+        '.input--hover-default': {
+          borderColor: config('theme.colors.gray.400'),
+        },
         '.input--size-small': {
           paddingTop: config('theme.spacing[1.5]'),
           paddingBottom: config('theme.spacing[1.5]'),
@@ -76,7 +79,13 @@ module.exports = plugin.withOptions(
           paddingLeft: config('theme.spacing.5'),
           paddingRight: config('theme.spacing.5'),
           fontSize: config('theme.fontSize.base')
-        }
+        },
+        '.input--prefix-icon-padding': {
+          paddingLeft: config('theme.spacing.10')
+        },
+        '.input--suffix-icon-padding': {
+          paddingRight: config('theme.spacing.10')
+        },
       }
 
       addUtilities({

@@ -5,10 +5,10 @@
       <f-form-container @on-submit="TrySignUp">
         <f-form-flex-container title="Form">
           <f-input-container label="Email">
-            <f-input block type="email" icon="Mail"></f-input>
+            <f-input block type="email" suffix-icon="Mail"></f-input>
           </f-input-container>
           <f-input-container label="Password">
-            <f-input type="password" icon="Lock"></f-input>
+            <f-input type="password" suffix-icon="Lock"></f-input>
           </f-input-container>
 
           <f-input-container label="Country">

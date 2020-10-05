@@ -39,12 +39,13 @@ export default {
 
 .form-flex--left-container {
   @screen sm {
-    @apply w-2/5;
+    @apply flex-1;
+    /* @apply w-2/5; */
   }
 
   @screen md {
     @apply mr-6;
-    @apply w-5/6;
+    /* @apply w-5/6; */
   }
 }
 .form-flex--left-desc {
@@ -55,7 +56,8 @@ export default {
   @apply mt-6;
 
   @screen md {
-    @apply w-full;
+    @apply w-1/2;
+    /* @apply w-auto; */
     @apply mt-0;
   }
 }

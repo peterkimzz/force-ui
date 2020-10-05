@@ -31,7 +31,7 @@
       >
         <div>
           <div class="f-modal--header">
-            <f-heading tag="h3">{{ title }}</f-heading>
+            <f-heading tag="h3" class="font-semibold">{{ title }}</f-heading>
             <f-button round @click="$emit('input', false)"
               ><f-icon icon="Close"
             /></f-button>
@@ -124,13 +124,17 @@ export default {
 }
 
 .f-modal--panel {
-  /* @apply flex items-center justify-center bg-white transform transition-all; */
   @apply bg-white transition-all transform;
   @apply rounded-lg;
   @apply overflow-hidden;
   @apply shadow-lg;
+  @apply w-full max-w-screen-sm;
 
-  @apply w-full max-w-screen-md;
+  @apply mx-2;
+
+  @screen md {
+    @apply mx-0;
+  }
 }
 
 .f-modal--header {

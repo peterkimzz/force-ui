@@ -23,19 +23,27 @@
         <f-icon icon="Selector" class="text-gray-400" />
       </span>
     </button>
-
-    <div v-show="isOpen && items.length" class="select--item-container">
-      <ul tabindex="-1" role="listbox" class="select--item-wrapper">
-        <f-select-item
-          v-for="item in items"
-          :key="item.title"
-          :value="item.value"
-          :active="value === item.value"
-          @click="OnSelectItem"
-          >{{ item.title }}</f-select-item
-        >
-      </ul>
-    </div>
+    <transition
+      enter-active-class="transform duration-150"
+      enter-class="-translate-y-1 opacity-0"
+      enter-to-class="translate-y-0 opacity-100"
+      leave-active-class="transform duration-300"
+      leave-class="translate-y-0 opacity-100"
+      leave-to-class="-translate-y-1 opacity-0"
+    >
+      <div v-show="isOpen && items.length" class="select--item-container">
+        <ul tabindex="-1" role="listbox" class="select--item-wrapper">
+          <f-select-item
+            v-for="item in items"
+            :key="item.title"
+            :value="item.value"
+            :active="value === item.value"
+            @click="OnSelectItem"
+            >{{ item.title }}</f-select-item
+          >
+        </ul>
+      </div>
+    </transition>
   </span>
 </template>
 
@@ -94,8 +102,8 @@ export default {
   @apply w-full;
 
   @screen md {
-    min-width: 200px;
-    width: auto;
+    /* min-width: 200px;
+    width: 100%; */
   }
 }
 .f-select.block {
@@ -110,6 +118,7 @@ export default {
   @apply input--text-color-default;
   @apply input--bg-color-default;
   @apply input--size-medium;
+  @apply input--suffix-icon-padding;
 
   width: inherit;
 
@@ -135,7 +144,7 @@ export default {
   }
 
   @screen sm {
-    @apply text-sm leading-5;
+    @apply text-sm;
   }
 }
 </style>

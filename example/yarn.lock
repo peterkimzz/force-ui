@@ -3617,10 +3617,10 @@ for-in@^1.0.2:
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
   integrity sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=
 
-force-ui@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/force-ui/-/force-ui-0.4.3.tgz#bb2a93eee391d22c5f9698928beec0d25e9d99e2"
-  integrity sha512-ghYK8uNGngTmr6875+45aJfz8dOmEMLtW1jtAFdKK/25suyRhFl0otOrqxs6oX0E3VQGypUqulq1MXQf+tIKLA==
+force-ui@^0.4.9:
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/force-ui/-/force-ui-0.4.9.tgz#dceaa69c481424ae8475a82c5d28620a956c5edf"
+  integrity sha512-aMHvJCOHiSvPSGoFCShCbkhK/MxyVk2UwcIezitEBaYyW0J8GWZsthzARhH4+nvofOmwHc3dghhnaBpIufH87A==
   dependencies:
     "@tailwindcss/ui" "^0.6.2"
     v-click-outside "^3.1.2"

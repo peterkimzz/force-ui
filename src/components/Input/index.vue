@@ -1,17 +1,23 @@
 <template>
   <span class="f-input-container">
+    <span
+      v-if="prefixIcon"
+      class="absolute inset-y-0 left-0 flex items-center pr-3 pointer-events-none"
+    >
+      <f-icon :icon="prefixIcon" class="f-input-icon" />
+    </span>
     <input
       :type="type"
       :value="value"
       :placeholder="placeholder"
       @input="(e) => $emit('input', e.target.value)"
-      :class="['f-input', 'f-input--' + size, { block }]"
+      :class="['f-input', 'f-input--' + size, { full, prefixIcon, suffixIcon }]"
     />
     <span
-      v-if="icon"
+      v-if="suffixIcon"
       class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
     >
-      <f-icon :icon="icon" class="f-input-icon" />
+      <f-icon :icon="suffixIcon" class="f-input-icon" />
     </span>
   </span>
 </template>
@@ -40,11 +46,15 @@ export default {
         return ['small', 'medium', 'large'].indexOf(v) !== -1
       }
     },
-    block: {
+    full: {
       type: Boolean,
       default: false
     },
-    icon: {
+    prefixIcon: {
+      type: String,
+      default: null
+    },
+    suffixIcon: {
       type: String,
       default: null
     }
@@ -63,21 +73,30 @@ export default {
 }
 
 .f-input {
+  /* @apply w-full; */
   @apply input--default;
   @apply input--border-default;
   @apply input--text-color-default;
   @apply input--bg-color-default;
   @apply input--box-shadow;
 
-  width: inherit;
+  &:hover {
+    @apply input--hover-default;
+  }
 
   &:focus {
     @apply shadow-outline-gray;
   }
 }
-.f-input.block {
+.f-input.full {
   @apply inline-block !important;
   @apply w-full;
+}
+.f-input.prefixIcon {
+  @apply input--prefix-icon-padding;
+}
+.f-input.suffixIcon {
+  @apply input--suffix-icon-padding;
 }
 
 /** Size */
