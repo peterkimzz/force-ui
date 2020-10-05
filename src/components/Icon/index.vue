@@ -4,6 +4,7 @@
 
 <script>
 import './Alert.vue'
+import './ArrowDown.vue'
 import './Close.vue'
 import './Facebook.vue'
 import './Github.vue'
@@ -18,6 +19,7 @@ import './Selector.vue'
 import './Mail.vue'
 import './Lock.vue'
 import './Search.vue'
+
 export default {
   name: 'FIcon',
   props: {
