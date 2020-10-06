@@ -1,6 +1,15 @@
 <template>
   <button :class="['f-tab--item', { active }]" @click="OnClick">
-    <span v-if="active" class="f-tab--dot">·</span>
+    <transition
+      enter-active-class="ease-in-out duration-150"
+      enter-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="ease-in-out duration-150"
+      leave-class=" opacity-100"
+      leave-to-class="opacity-0"
+    >
+      <span v-if="active" class="f-tab--dot">·</span>
+    </transition>
     <slot />
   </button>
 </template>
@@ -30,7 +39,7 @@ export default {
 
 <style lang="postcss" scoped>
 .f-tab--item {
-  @apply transition-all duration-200;
+  @apply transition-colors;
 
   @apply relative;
   @apply inline-block;
@@ -40,7 +49,7 @@ export default {
 
   @apply text-sm;
   @apply font-bold;
-  @apply text-gray-400;
+  @apply input--text-color-placeholder;
 
   &:hover {
     @apply text-gray-500;
@@ -56,7 +65,7 @@ export default {
 }
 
 .f-tab--dot {
-  @apply transition-all duration-75;
+  @apply transition-all;
 
   @apply absolute;
   @apply text-4xl;

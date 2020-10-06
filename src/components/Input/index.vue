@@ -73,23 +73,25 @@ export default {
 }
 
 .f-input {
-  /* @apply w-full; */
+  @apply w-full;
   @apply input--default;
   @apply input--border-default;
   @apply input--text-color-default;
   @apply input--bg-color-default;
-  @apply input--box-shadow;
 
   &:hover {
-    @apply input--hover-default;
+    @apply input--border-hover-default;
   }
 
   &:focus {
     @apply shadow-outline-gray;
   }
+
+  @screen md {
+    @apply input--width;
+  }
 }
 .f-input.full {
-  @apply inline-block !important;
   @apply w-full;
 }
 .f-input.prefixIcon {

@@ -1,11 +1,10 @@
 <template>
   <span
-    :class="['f-select', { block }]"
+    :class="['f-select', { full }]"
     v-click-outside="() => (isOpen = false)"
     @keydown.esc="OnEsc"
   >
     <button
-      type="button"
       aria-haspopup="listbox"
       aria-expanded="true"
       aria-labelledby="listbox-label"
@@ -20,7 +19,7 @@
       <span
         class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
       >
-        <f-icon icon="Selector" class="text-gray-400" />
+        <f-icon icon="Selector" class="input--text-color-placeholder" />
       </span>
     </button>
     <transition
@@ -63,7 +62,7 @@ export default {
       type: Array,
       default: () => []
     },
-    block: {
+    full: {
       type: Boolean,
       default: false
     }
@@ -102,35 +101,43 @@ export default {
   @apply w-full;
 
   @screen md {
-    /* min-width: 200px;
-    width: 100%; */
+    /* @apply w-auto; */
+    @apply w-40;
   }
 }
-.f-select.block {
+.f-select.full {
   @apply inline-block !important;
   @apply w-full;
 }
 
 .select-btn {
+  @apply w-full;
   @apply input--default;
-  @apply input--box-shadow;
   @apply input--border-default;
   @apply input--text-color-default;
   @apply input--bg-color-default;
   @apply input--size-medium;
   @apply input--suffix-icon-padding;
 
-  width: inherit;
+  /* width: inherit; */
 
   &:focus {
-    @apply input--outline;
+    @apply input--focus;
+  }
+
+  &:hover {
+    @apply input--border-hover-default;
+  }
+
+  @screen md {
+    @apply input--width;
   }
 }
 .select-text {
   @apply block truncate;
 }
 .select-text.unselected {
-  @apply text-gray-400;
+  @apply input--text-color-placeholder;
 }
 
 .select--item-container {

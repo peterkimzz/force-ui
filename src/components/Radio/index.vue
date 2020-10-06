@@ -65,18 +65,22 @@ export default {
   @apply inline-flex items-center;
   @apply cursor-pointer;
 
-  @apply py-1;
+  @apply py-0.5;
 }
 .f-radio.full {
   @apply w-full;
 }
 
 .form-radio {
-  @apply input--text-color-default;
   @apply input--default;
+  @apply input--text-color-default;
+
+  &:hover {
+    @apply input--border-hover-default;
+  }
 
   &:focus {
-    @apply input--outline;
+    @apply input--focus;
   }
 }
 

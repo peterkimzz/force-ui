@@ -5,7 +5,8 @@
       'f-tag--' + type,
       'f-tag--' + size,
       {
-        plain
+        plain,
+        noBorder
       }
     ]"
     @click="(e) => $emit('click', e)"
@@ -46,6 +47,10 @@ export default {
     plain: {
       type: Boolean,
       default: false
+    },
+    noBorder: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -57,7 +62,9 @@ export default {
 
   @apply input--default;
   @apply input--border-default;
-  @apply input--box-shadow;
+}
+.f-tag.noBorder {
+  @apply border-0 !important;
 }
 
 /** Size */

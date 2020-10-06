@@ -9,6 +9,7 @@
     </div>
 
     <div slot="menu">
+      <f-navigation-bar-item href="/">Home</f-navigation-bar-item>
       <f-navigation-bar-item
         href="https://github.com/peterkimzz/force-ui"
         target="_blank"

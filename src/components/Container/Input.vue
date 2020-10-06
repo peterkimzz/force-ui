@@ -27,16 +27,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.input-container {
-  /* @apply mt-4; */
-  /* @apply flex-1; */
-  /* flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: 0%; */
-}
-
 .input-container__label {
-  @apply text-gray-600;
+  @apply text-gray-700;
   @apply font-medium;
   @apply text-xs;
   @apply mb-1.5;

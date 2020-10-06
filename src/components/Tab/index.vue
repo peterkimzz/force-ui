@@ -28,6 +28,18 @@ export default {
       selected: null
     }
   },
+  watch: {
+    $route() {
+      if (this.items.length) {
+        this.selected = this.items[0].title
+      }
+
+      if (this.type === 'route') {
+        const item = this.items.find((item) => item.href === this.$route.path)
+        this.selected = item.title
+      }
+    }
+  },
   methods: {
     OnItem(tabText) {
       this.selected = tabText

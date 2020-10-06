@@ -30,13 +30,20 @@ module.exports = plugin.withOptions(
         '.input--default': {
           outline: 'none',
           display: 'inline-block',
-          maxWidth: '100%',
+          boxShadow: config('theme.boxShadow.sm'),
           transitionProperty: config('theme.transitionProperty.all'),
           transitionDuration: config('theme.transitionDuration.150'),
           transitionTimingFunction: config('theme.transitionTimingFunction.in-out'),
         },
-        '.input--box-shadow': {
-          boxShadow: config('theme.boxShadow.sm')
+        '.input--width': {
+          width: '100%',
+          maxWidth: config('theme.width.60')
+        },
+        '.btn--default': {
+          fontWeight: config('theme.fontWeight.semibold')
+        },
+        '.input--focus': {
+          boxShadow: config('theme.boxShadow.outline-gray'),
         },
         '.input--border-default': {
           borderStyle: 'solid',
@@ -44,20 +51,20 @@ module.exports = plugin.withOptions(
           borderColor: config('theme.colors.gray.300'),
           borderRadius: config('theme.borderRadius.lg'),
         },
+        '.input--border-hover-default': {
+          borderColor: config('theme.colors.gray.400'),
+        },
         '.input--text-color-default': {
-          color: config('theme.colors.gray.800'),
+          color: config('theme.colors.gray.900'),
+        },
+        '.input--text-color-placeholder': {
+          color: config('theme.colors.gray.400'),
         },
         '.input--bg-color-default': {
           backgroundColor: config('theme.colors.white'),
         },
-        '.input--bg-color-default-hover': {
+        '.input--bg-color-hover-default': {
           backgroundColor: config('theme.colors.gray.100'),
-        },
-        '.input--outline': {
-          boxShadow: config('theme.boxShadow.outline-gray'),
-        },
-        '.input--hover-default': {
-          borderColor: config('theme.colors.gray.400'),
         },
         '.input--size-small': {
           paddingTop: config('theme.spacing[1.5]'),
@@ -80,6 +87,10 @@ module.exports = plugin.withOptions(
           paddingRight: config('theme.spacing.5'),
           fontSize: config('theme.fontSize.base')
         },
+        '.input--icon-size': {
+          width: config('theme.width.4'),
+          height: config('theme.height.4'),
+        },
         '.input--prefix-icon-padding': {
           paddingLeft: config('theme.spacing.10')
         },
@@ -99,7 +110,7 @@ module.exports = plugin.withOptions(
         fontSize,
         fontFamily: {
           sans: [
-            'Inter',
+            '-apple-system',
             ...defaultTheme.fontFamily.sans
           ]
         },

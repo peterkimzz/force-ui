@@ -4,7 +4,7 @@
     :href="href"
     :to="href"
     :target="target"
-    :class="['link', 'link--' + type]"
+    :class="['f-link', 'f-link--' + type]"
   >
     <slot />
   </component>
@@ -30,7 +30,7 @@ export default {
       required: false,
       default: 'primary',
       validator(v) {
-        return ['default', 'primary', 'button'].indexOf(v) !== -1
+        return ['default', 'primary', 'button', 'ghost'].indexOf(v) !== -1
       }
     }
   },
@@ -51,33 +51,51 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.link {
-  @apply no-underline;
-
+.f-link {
   @apply input--default;
   @apply input--text-color-default;
+
+  @apply shadow-none;
+  @apply no-underline;
 
   &:hover {
     @apply underline;
   }
 }
 
-.link--button {
-  @apply font-bold;
+.f-link--primary {
+  @apply text-primary-500;
+}
 
+.f-link--button {
+  @apply input--size-medium;
   @apply input--border-default;
   @apply input--bg-color-default;
-  @apply input--box-shadow;
 
-  @apply input--size-medium;
+  @apply font-semibold;
 
   &:hover {
     @apply no-underline;
-    @apply input--bg-color-default-hover;
+    @apply input--bg-color-hover-default;
+  }
+
+  &:focus {
+    @apply input--focus;
   }
 }
+.f-link--ghost {
+  @apply input--size-medium;
+  @apply input--border-default;
+  @apply input--text-color-default;
 
-.link--primary {
-  @apply text-primary-500;
+  @apply font-semibold;
+  @apply bg-transparent;
+  @apply border-transparent;
+  @apply shadow-none;
+
+  &:hover {
+    @apply input--bg-color-hover-default;
+    @apply no-underline;
+  }
 }
 </style>

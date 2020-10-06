@@ -1,6 +1,6 @@
 <template>
   <li class="table-cell">
-    <f-link v-bind="$attrs" class="f-nav--item"><slot /></f-link>
+    <f-link v-bind="$attrs" class="f-nav--item" type="ghost"><slot /></f-link>
   </li>
 </template>
 
@@ -12,16 +12,6 @@ export default {
 
 <style lang="postcss" scoped>
 .f-nav--item {
-  @apply py-5;
-  @apply px-3;
-  @apply border-transparent;
-  @apply font-semibold;
-
-  border-bottom-width: 3px;
-
-  &:hover {
-    @apply border-gray-700;
-    @apply no-underline;
-  }
+  @apply my-4;
 }
 </style>

@@ -5,6 +5,7 @@
 <script>
 import './Alert.vue'
 import './ArrowDown.vue'
+import './Check.vue'
 import './Close.vue'
 import './Facebook.vue'
 import './Github.vue'
@@ -42,6 +43,6 @@ export default {
 
 <style lang="postcss" scoped>
 .icon {
-  @apply w-5 h-5;
+  @apply w-4 h-4;
 }
 </style>

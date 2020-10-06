@@ -108,16 +108,15 @@ export default {
 
 <style lang="postcss" scoped>
 .f-button {
-  @apply font-semibold;
-
   @apply input--default;
   @apply input--border-default;
-  @apply input--box-shadow;
+
   @apply align-middle;
+  @apply font-semibold;
   @apply w-full;
 
   &:focus {
-    @apply input--outline;
+    @apply input--focus;
   }
 
   @screen md {
@@ -163,7 +162,7 @@ export default {
   @apply input--text-color-default;
 
   &:hover {
-    @apply input--bg-color-default-hover;
+    @apply input--bg-color-hover-default;
   }
 }
 .f-button--default.plain {

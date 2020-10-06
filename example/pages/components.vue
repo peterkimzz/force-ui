@@ -90,7 +90,6 @@
                   { title: 'Force UI', value: 2 }
                 ]"
                 placeholder="Select item"
-                block
               />
             </f-input-container>
           </f-form-flex-container>
@@ -126,7 +125,13 @@
               <f-checkbox>I agree with privacy policy & terms</f-checkbox>
             </f-input-container>
             <f-input-container label="Notifications">
-              <f-checkbox>Email notification</f-checkbox>
+              <f-checkbox>
+                Email notification
+                <p slot="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatum, numquam magni. Debitis sapiente sit..
+                </p>
+              </f-checkbox>
               <f-checkbox>SMS notification</f-checkbox>
             </f-input-container>
           </f-form-flex-container>
@@ -240,18 +245,22 @@
             <f-input-container label="Info">
               <f-tag type="info">Blueberry</f-tag>
               <f-tag type="info" plain>Blueberry</f-tag>
+              <f-tag type="info" plain no-border>Blueberry</f-tag>
             </f-input-container>
             <f-input-container label="Success">
               <f-tag type="success">Melon</f-tag>
               <f-tag type="success" plain>Melon</f-tag>
+              <f-tag type="success" plain no-border>Melon</f-tag>
             </f-input-container>
             <f-input-container label="Warning">
               <f-tag type="warning">Banana</f-tag>
               <f-tag type="warning" plain>Banana</f-tag>
+              <f-tag type="warning" plain no-border>Banana</f-tag>
             </f-input-container>
             <f-input-container label="Error">
               <f-tag type="error">Apple</f-tag>
               <f-tag type="error" plain>Apple</f-tag>
+              <f-tag type="error" plain no-border>Apple</f-tag>
             </f-input-container>
           </f-form-flex-container>
         </f-form-container>
